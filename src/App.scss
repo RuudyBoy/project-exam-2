@@ -1,0 +1,65 @@
+//navbar
+nav {
+    background-color:white;
+}
+
+.nav-link {
+    color: blue;
+}
+
+.navbar-brand {
+    color:blue;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.mr-auto{
+    background-color: white;
+}
+
+.btn-outline-success {
+    color: blue;
+    border: 2px solid blue;
+}
+
+.login {
+    margin-left: 10px;
+}
+
+
+//Body
+
+body {
+    text-align: center;
+    background-image: url(./images/bilde.jpg);
+}
+
+h1 {
+    color: blue;
+}
+
+.home-cta {
+    background-color: blue;
+    color: white;
+    padding: 15px 20px ;
+    border-radius: 10px;
+}
+p {
+    color: white;
+}
+
+.home-cta:hover{
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+    padding: 15px 20px ;
+    border-radius: 10px;
+}
+
+
+
+

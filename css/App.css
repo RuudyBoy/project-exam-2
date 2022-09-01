@@ -1,0 +1,39 @@
+nav {
+  background-color: white;
+}
+
+.nav-link {
+  color: blue;
+}
+
+.navbar-brand {
+  color: blue;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.mr-auto {
+  background-color: white;
+}
+
+.btn-outline-success {
+  color: blue;
+  border: 2px solid blue;
+}
+
+.login {
+  margin-left: 10px;
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+  color: blue;
+}
+/*# sourceMappingURL=App.css.map */
