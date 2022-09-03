@@ -1,5 +1,4 @@
 import Heading from '../layout/Heading';
-import image from '../../images/bilde.jpg';
 
 export default function Home() {
   return (

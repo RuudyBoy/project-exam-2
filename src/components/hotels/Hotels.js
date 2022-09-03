@@ -1,5 +1,12 @@
 import Heading from '../layout/Heading';
+import HotelPost from '../HotelPost';
 
 export default function Hotels() {
-  return <Heading title="Hotels" />;
+  return (
+		<div className="App">
+      <Heading title="Hotels" />
+			<HotelPost />
+		</div>
+	);
 }
+  

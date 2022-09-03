@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {
   BrowserRouter as Router,
-  Routes,
+  Switch,
   Route,
   NavLink,
 } from 'react-router-dom';
@@ -50,12 +50,12 @@ function Layout() {
         </Navbar.Collapse>
       </Navbar>
       <Container>
-        <Routes>
+        <Switch>
           <Route path="/" exact element={<Home />} />
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-        </Routes>
+        </Switch>
       </Container>
     </Router>
   );
