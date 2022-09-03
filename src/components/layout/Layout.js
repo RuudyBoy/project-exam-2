@@ -14,6 +14,7 @@ import Hotels from '../hotels/Hotels';
 import About from '../about/About';
 import Contact from '../contact/Contact';
 
+
 function Layout() {
   return (
     <Router>
@@ -51,10 +52,10 @@ function Layout() {
       </Navbar>
       <Container>
         <Switch>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/hotels" element={<Hotels />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/"exact>{<Home />} </Route>
+          <Route path="/hotels"> {<Hotels />} </Route>
+          <Route path="/contact"> {<Contact />} </Route>
+          <Route path="/about"> {<About />}</Route>
         </Switch>
       </Container>
     </Router>

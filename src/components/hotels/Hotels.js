@@ -1,5 +1,5 @@
 import Heading from '../layout/Heading';
-import HotelPost from '../HotelPost';
+import HotelPost from "../HotelPost";
 
 export default function Hotels() {
   return (
