@@ -13,6 +13,8 @@ import Home from '../home/Home';
 import Hotels from '../hotels/Hotels';
 import About from '../about/About';
 import Contact from '../contact/Contact';
+import HotelDetail from '../HotelDetail';
+import HotelPost from '../HotelPost';
 
 
 function Layout() {
@@ -56,6 +58,12 @@ function Layout() {
           <Route path="/hotels"> {<Hotels />} </Route>
           <Route path="/contact"> {<Contact />} </Route>
           <Route path="/about"> {<About />}</Route>
+          <Route path="/" exact>
+            <HotelPost />
+          </Route>
+          <Route path="/detail/:id">
+            <HotelDetail />
+          </Route>
         </Switch>
       </Container>
     </Router>

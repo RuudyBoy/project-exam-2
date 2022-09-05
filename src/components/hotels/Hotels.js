@@ -5,7 +5,7 @@ export default function Hotels() {
   return (
 		<div className="App">
       <Heading title="Hotels" />
-			<HotelPost />
+	  <div className="hotel-post"><HotelPost /></div>
 		</div>
 	);
 }

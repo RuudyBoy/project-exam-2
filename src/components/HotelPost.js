@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BASE_URL } from "../constants/api";
+import HotelItem from "./HotelItem";
 
 function HotelPost() {
  const [hotels, setHotels] = useState([]);
@@ -37,12 +38,15 @@ function HotelPost() {
  }
 
  return (
-  <>
-   {hotels.map(function(hotel) {
-    return <div key={hotel.id}><p>{hotel.attributes.text}</p></div>;
-   })}
-  </>
- );
+    <div className="hotel">
+     {hotels.map(function (hotel) {
+        
+      const {id, attributes} = hotel;
+      console.log(hotel);
+      return <HotelItem key={id}  id={id} attributes={attributes.hotel} />;
+     })}
+    </div>
+   );
 }
 
 export default HotelPost;

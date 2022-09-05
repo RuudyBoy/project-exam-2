@@ -54,7 +54,7 @@ h1 {
     border-radius: 10px;
 }
 p {
-    color: white;
+    color: black;
 }
 
 .home-cta:hover{
@@ -65,6 +65,29 @@ p {
     border-radius: 10px;
 }
 
+//Hotel page
 
+.hotel {
+    background-color: grey;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: none;
+}
+
+.hotel p {
+    max-width: 80%;
+    margin: 0px auto;
+    color: black;
+}
+
+.hotel-post {
+    margin: 5px auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
 
 

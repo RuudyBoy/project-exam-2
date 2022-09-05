@@ -31,9 +31,60 @@ a {
 
 body {
   text-align: center;
+  background-image: url(./images/bilde.jpg);
+  background-size: cover;
 }
 
 h1 {
   color: blue;
+}
+
+.home-page {
+  margin-top: 100px;
+}
+
+.home-cta {
+  background-color: blue;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+p {
+  color: black;
+}
+
+.home-cta:hover {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.hotel {
+  background-color: grey;
+  margin: 10px auto;
+  border-radius: 10px;
+  border: none;
+}
+
+.hotel p {
+  max-width: 80%;
+  margin: 0px auto;
+  color: black;
+}
+
+.hotel-post {
+  margin: 5px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=App.css.map */
