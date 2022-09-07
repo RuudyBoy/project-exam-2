@@ -11,6 +11,7 @@ import LoginPage from '../login/LoginPage';
 import Nav from './Nav';
 import DashboardPage from '../dashboard/DashboardPage';
 import "../../App.scss"
+import Home from '../home/Home';
 
 
 function Layout() {
@@ -19,6 +20,9 @@ function Layout() {
       <Nav />
       <Container>
         <Switch>
+        <Route path="/home" exact>
+            <Home />
+          </Route>
           <Route path="/hotels" exact>
             <HotelPost />
           </Route>

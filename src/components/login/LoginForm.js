@@ -5,14 +5,14 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import FormError from "../common/FormError";
-import { TOKEN_PATH } from "../../constants/api";
+import { BASE_URL, TOKEN_PATH } from "../../constants/api";
 
-const url = 'https://noroff-cors.herokuapp.com/'+ TOKEN_PATH;
+const url = BASE_URL + TOKEN_PATH;
 
 
 const schema =yup.object({
-    Username: yup.string().required("Please enter your username"),
-    Password: yup.number().required("Please enter your password"),
+	email: yup.string().required().email(),
+    password: yup.string().matches("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})","Please enter your password"),
   }).required();
 
 export default function LoginForm() {
@@ -32,25 +32,31 @@ export default function LoginForm() {
 		try {
 			const response = await axios.post(url, data);
 			console.log("response", response.data);
+			console.log(url);
+			console.log(data);
+			
 		} catch (error) {
 			console.log("error", error);
+			console.log( error.response)
             setLoginError(error.toString());
 		} finally {
 			setSubmitting(false);
+			console.log(false);
 		}
 	}
 
+	
 	return (
 		<>
 			<form onSubmit={handleSubmit(onSubmit)}>
             {loginError && <FormError>{loginError}</FormError>}
             <fieldset disabled={submitting}>
                 <div>
-                    <input name="username" {...register("Username", { required: true, maxLength: 5})} />
-					{errors.username && <FormError>This field is required</FormError>}
+                    <input name="email" {...register("email", { required: true, maxLength: 5})} />
+					{errors.email && <FormError>This field is required</FormError>}
                 </div>
 				<div>
-                    <input name="password" {...register("Password", { required: true })} />
+                    <input name="password" {...register("password", { required: true })} />
 					{errors.password && <FormError>This field is required</FormError>}
                 </div>
             <button>{submitting ? "Loggin in..." : "Login"}</button>
