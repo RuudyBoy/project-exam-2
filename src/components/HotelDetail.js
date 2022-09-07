@@ -51,7 +51,8 @@ function HotelDetail() {
 
  return (
   <div className="hotel-info">
-   <h2>{id}</h2>
+   <h2>{hotel.attributes}</h2>
+   <p>{id}</p>
 
   </div>
  );
