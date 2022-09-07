@@ -12,15 +12,17 @@ import Nav from './Nav';
 import DashboardPage from '../dashboard/DashboardPage';
 import "../../App.scss"
 import Home from '../home/Home';
+import { AuthProvider } from '../../context/AuthContext';
 
 
 function Layout() {
   return (
+    <AuthProvider>
     <Router>
       <Nav />
       <Container>
         <Switch>
-        <Route path="/home" exact>
+        <Route path="/" exact>
             <Home />
           </Route>
           <Route path="/hotels" exact>
@@ -38,6 +40,7 @@ function Layout() {
         </Switch>
       </Container>
     </Router>
+    </AuthProvider>
   );
 }
 
