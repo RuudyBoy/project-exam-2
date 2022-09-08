@@ -15,13 +15,14 @@ function HotelDetail() {
   history.push("/");
  }
 
- const url = BASE_URL + "/" + id;
+ const url = BASE_URL + "hotels/" + id;
 
  useEffect(
   function () {
    async function fetchData() {
     try {
      const response = await fetch(url);
+     console.log(url);
 
      if (response.ok) {
       const json = await response.json();

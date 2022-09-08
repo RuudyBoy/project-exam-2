@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext} from "react";
 import { useHistory } from "react-router-dom";
 import React from "react";
 import { useForm } from "react-hook-form";
@@ -28,9 +28,10 @@ export default function LoginForm() {
         resolver: yupResolver(schema)
       });
 
-	  const [ setAuth] = useContext(AuthContext);
+	  const [auth, setAuth] = useContext(AuthContext);
+	  console.log(auth);
     
-      async function onSubmit(data ) {
+      async function onSubmit(data) {
 		
 		setSubmitting(true);
         setLoginError(null);
@@ -38,7 +39,10 @@ export default function LoginForm() {
 		console.log(data);
 
 		try {
-			const response = await axios.post(url, data);
+			const response = await axios.post(url,  {
+				identifier: "project@exam.com",
+				password: "Exam2022"
+			});
 			console.log("response", response.data);
 			console.log(url);
 			console.log(data);
@@ -58,7 +62,7 @@ export default function LoginForm() {
 	
 	return (
 		<>
-			<form onSubmit={handleSubmit(onSubmit)}>
+			<form className="form-design"onSubmit={handleSubmit(onSubmit)}>
             {loginError && <FormError>{loginError}</FormError>}
             <fieldset disabled={submitting}>
                 <div>
@@ -69,7 +73,7 @@ export default function LoginForm() {
                     <input name="password" {...register("password", { required: true })} />
 					{errors.password && <FormError>This field is required</FormError>}
                 </div>
-            <button>{submitting ? "Loggin in..." : "Login"}</button>
+            <button className="cta-login">{submitting ? "Loggin in..." : "Login"}</button>
             </fieldset>
 			</form>
 		</>

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { BASE_URL } from "../constants/api";
 import HotelItem from "./HotelItem";
 
+const url = BASE_URL + "hotels";
+
 function HotelPost() {
  const [hotels, setHotels] = useState([]);
  const [loading, setLoading] = useState(true);
@@ -10,8 +12,8 @@ function HotelPost() {
  useEffect(function () {
   async function fetchData() {
    try {
-    const response = await fetch(BASE_URL);
-    console.log(BASE_URL);
+    const response = await fetch(url);
+    console.log(url);
 
     if (response.ok) {
      const json = await response.json();
