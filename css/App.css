@@ -89,8 +89,43 @@ p {
 }
 
 .form-error {
-  background-color: aquamarine;
+  background-color: orange;
   padding: 20px;
+  border: none;
+  border-radius: 10px;
   color: aliceblue;
+}
+
+.form-design {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+.cta-login {
+  font-weight: bold;
+  border: none;
+  background-color: #2f74e9;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.cta-login:hover {
+  background-color: #2d68cc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input {
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+label {
+  display: block;
 }
 /*# sourceMappingURL=App.css.map */

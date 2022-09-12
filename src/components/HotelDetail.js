@@ -54,6 +54,7 @@ function HotelDetail() {
   <div className="hotel-info">
    <h2>{hotel.attributes}</h2>
    <p>{id}</p>
+   <a className="cta-login" href="/enquiry"> here</a>
 
   </div>
  );
