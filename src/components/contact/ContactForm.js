@@ -9,16 +9,19 @@ import FormError from "../common/FormError";
 import { BASE_URL } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
 
+
+
  const url =  BASE_URL + "messages";
 
 
 const schema =yup.object({
-	name: yup.string().required(),
+    name: yup.string().required(),
     message: yup.string().required(),
     subject: yup.string().required(),
   }).required();
 
 export default function ContactForm() {
+	
     const [submitting, setSubmitting] = useState(false);
 	const [loginError, setLoginError] = useState(null);
 
@@ -33,23 +36,23 @@ export default function ContactForm() {
 	  console.log(auth);
     
       async function onSubmit(data) {
-		
+	
 		setSubmitting(true);
-        setLoginError(null);
+                setLoginError(null);
 
 		console.log(data);
 
 		try {
-			const response = await axios.post(url, {"data" : {
-                "message": "",
-                "subject":"",
-                "name": ""
+			const response = await axios.post(url, {data : {
+                "message": "nytt hotell",
+                "subject": "hotellbooking",
+                "name": "Kåre"
             }} );
 			console.log("response", response.data);
 			console.log(url);
 			console.log(data);
 			setAuth(response.data);
-			history.push("/dashboard");
+			history.push("/contact");
 			
 		} catch (error) {
 			console.log("error", error);

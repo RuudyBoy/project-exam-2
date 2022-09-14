@@ -67,28 +67,37 @@ p {
 
 //Hotel page
 
+
 .hotel {
-    background-color: grey;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: #f7f7f7;
     margin: 10px auto;
     border-radius: 10px;
     border: none;
 }
 
-.hotel p {
-    max-width: 80%;
-    margin: 0px auto;
-    color: black;
+.hotel-img {
+    max-width: 100%;
+    margin-top: 0px;
+    border-radius: 10px 10px 0px 0px;
 }
 
-.hotel-post {
-    margin: 5px auto;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+.hotel-show {
+    max-width: 500px;
+   background-color: white;
+   margin: 10px auto;
+   border: none;
+   border-radius: 10px;
 }
+.hotel p {
+    max-width: 500px;
+    margin: 0px auto;
+    color: black;
+    padding: 10px;
+}
+
 
 .form-error {
     background-color: orange;
@@ -115,6 +124,7 @@ p {
     padding: 5px 15px;
     border-radius: 10px;
     margin: 10px;
+    margin-bottom: 10px;
 }
 
 .cta-login:hover {
