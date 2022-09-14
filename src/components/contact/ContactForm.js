@@ -52,7 +52,7 @@ export default function ContactForm() {
 			console.log(url);
 			console.log(data);
 			setAuth(response.data);
-			history.push("/contact");
+			history.push("/admin");
 			
 		} catch (error) {
 			console.log("error", error);

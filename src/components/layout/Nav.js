@@ -17,10 +17,10 @@ function Nav() {
 			<Link to="/">Home</Link>
             <Link to="/hotels">Hotels</Link>
             <Link to="/contact">Contact</Link>
-            <Link to="/about">About</Link>
+            <Link to="/about">About </Link>
 			{auth ? (
 				<>
-					| <Link to="/dashboard">Dashboard</Link> | <button className="cta-login" onClick={logout}>Log out</button>
+					|<Link to="/enquiry">Enquiry</Link> <Link to="/admin">Messages</Link>  <Link to="/dashboard">Dashboard</Link>  <button className="cta-login" onClick={logout}>Log out</button>
 				</>
 			) : (
 				<Link to="/login">Login</Link>

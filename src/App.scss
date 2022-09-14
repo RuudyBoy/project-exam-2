@@ -35,20 +35,20 @@ a {
 
 body {
     text-align: center;
-    background-image: url(./images/bilde.jpg);
-    background-size: cover;
+    //background-image: url(./images/bilde.jpg);
+    //background-size: cover;
 }
+
+
 
 h1 {
-    color: blue;
+    color: #2f74e9;
 }
 
-.home-page {
-   margin-top: 100px;
-}
+
 
 .home-cta {
-    background-color: blue;
+    background-color: #2d68cc;
     color: white;
     padding: 15px 20px ;
     border-radius: 10px;
@@ -58,10 +58,9 @@ p {
 }
 
 .home-cta:hover{
-    background-color: white;
-    color: blue;
-    border: 2px solid blue;
-    padding: 15px 20px ;
+    color: white;
+    background-color: #2f74e9;
+    padding: 16px 21px ;
     border-radius: 10px;
 }
 
@@ -98,6 +97,12 @@ p {
     padding: 10px;
 }
 
+//Hotel info page
+
+.hotel-cover {
+    max-width: 100px;
+}
+
 
 .form-error {
     background-color: orange;
@@ -107,9 +112,26 @@ p {
     color: aliceblue;
 }
 
+
+//Login
+
+.login-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    margin-top: 150px;
+}
+
+
+.login-image {
+    background-image: url(./images/bilde.jpg);
+    background-size: cover;
+}
 //Form
 
 .form-design {
+    display: inline-block;
+    place-items: center;
     background-color: #f7f7f7;
     padding: 20px;
     border: none;
@@ -140,4 +162,21 @@ input {
 
 label {
     display: block;
+}
+
+
+// Messages on admin page
+
+.messages {
+    background-color: white;
+    color: #2d68cc;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.message-container {
+    display: grid;
+    background-color: #f7f7f7;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
 }

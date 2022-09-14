@@ -65,11 +65,14 @@ export default function LoginForm() {
 			<form className="form-design"onSubmit={handleSubmit(onSubmit)}>
             {loginError && <FormError>{loginError}</FormError>}
             <fieldset disabled={submitting}>
+				<h1>Login</h1>
                 <div>
+				<label>Email</label>
                     <input name="email" {...register("email", { required: true, maxLength: 5})} />
 					{errors.email && <FormError>This field is required</FormError>}
                 </div>
 				<div>
+					<label>Password</label>
                     <input name="password" {...register("password", { required: true })} />
 					{errors.password && <FormError>This field is required</FormError>}
                 </div>

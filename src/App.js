@@ -12,6 +12,7 @@ import HotelDetail from "./components/HotelDetail";
 import LoginPage from "./components/login/LoginPage";
 import Contact from "./components/contact/Contact";
 import About from "./components/about/About";
+import ContactPost from "./components/admin/ContactPost";
 
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
           <Route path="/login">
 							<LoginPage />
 						</Route>
+            <Route path="/admin">
+						< ContactPost/>
+					</Route>
             <Route path="/dashboard" exact>
 						<DashboardPage />
 					</Route>
