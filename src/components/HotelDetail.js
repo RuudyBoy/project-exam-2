@@ -67,8 +67,10 @@ function HotelDetail() {
    <p>2 adults, 1 room</p>
    <p> 12.aug-14.aug</p>
    <a className="cta-sendequiry" href="/enquiry"> Send enquiry</a>
+   
    </div>
    </div>
+   <hr/>
   </div>
  );
 }
