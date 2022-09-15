@@ -6,8 +6,8 @@ export default function LoginPage() {
 		<>
 		<div className="login-container">
 		<div>
-			<h1>Holzinger</h1>
-			<p>dette er fett</p>
+			<h1 className="logo-login">Holzinger</h1>
+			<p>Logo her</p>
 		</div>
 		<div>
 			<Heading content="Login" />

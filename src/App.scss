@@ -1,6 +1,6 @@
 //navbar
 nav {
-    background-color:white;
+    background-color:transparent;
     padding: 10px;
 }
 
@@ -19,6 +19,7 @@ a {
 }
 
 nav a {
+    color: #f7f7f7;
     margin-left: 10px;
 }
 
@@ -36,12 +37,11 @@ nav a {
 }
 
 .cta-login {
-    font-weight: bold;
     border: none;
     background-color:#2f74e9 ;
     color: white;
     padding: 5px 1em;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 10px;
     margin-bottom: 10px;
 }
@@ -141,18 +141,20 @@ p, a {
 
 .hotel-show h2 {
     color:white;
-    background-color: #2d68cc;
+    background-color: #2f74e9;
 }
-.hotel p {
-    font-size: 1em;
-    color: black;
+.hotel-p {
+    width: 100%;
+    color:#707070 ;
     padding: 10px;
-    margin: 0px auto;
 }
 
 .cta-hotel {
+    display: inline;
+    color: #2f74e9;
     border: 2px solid #2f74e9;
     padding: 5px 1em;
+    margin-bottom: 0px;
 }
 
 .cta-hotel:hover {
@@ -231,11 +233,10 @@ p, a {
     margin-top: 150px;
 }
 
-
-.login-image {
-    background-image: url(./images/bilde.jpg);
-    background-size: cover;
+.logo-login {
+    font-size: 100px;
 }
+
 //Form
 
 .form-design {
@@ -303,4 +304,23 @@ label {
     background-color: #f7f7f7;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+}
+
+//About page
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.about-image {
+    width: 100%;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
 }

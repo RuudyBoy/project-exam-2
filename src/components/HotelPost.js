@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { BASE_URL } from "../constants/api";
 import HotelItem from "./HotelItem";
 
-const url = BASE_URL + "hotels";
+const url = BASE_URL + "hotels?populate=*";
 
 function HotelPost() {
  const [hotels, setHotels] = useState([]);
@@ -44,7 +44,7 @@ function HotelPost() {
      {hotels.map(function (hotel) {
       const {id, attributes} = hotel;
       console.log(hotel);
-      return <HotelItem key={id}  id={id} attributes={attributes.hotel} />;
+      return <HotelItem key={id}  id={id} attributes={attributes.image.data.attributes.url} />;
      })}
     </div>
    );

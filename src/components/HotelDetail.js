@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { BASE_URL } from "../constants/api";
-import bilde from "../images/bilde.jpg";
 
 function HotelDetail() {
  const [hotel, setHotel] = useState(null);
@@ -53,10 +52,10 @@ function HotelDetail() {
 
  return (
   <div className="hotel-info">
-   <img className="hotel-cover" src={bilde} alt="Logo" />
    <div className="info-grid">
    <div className="hotel-text">
    <h1>{hotel.data.attributes.hotel}</h1>
+   <p>Rating:{hotel.data.attributes.rating}/5</p>
    <p>Kykkelsrudveien 47, Askim 1815</p>
    <p>{hotel.data.attributes.text}</p>
    </div>
