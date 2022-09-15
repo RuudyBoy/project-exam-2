@@ -54,10 +54,21 @@ function HotelDetail() {
  return (
   <div className="hotel-info">
    <img className="hotel-cover" src={bilde} alt="Logo" />
-   <h2>{hotel.attributes}</h2>
+   
+   
+   <div className="info-grid">
+   <div className="hotel-text">
+   <h1>Hotel</h1>
    <p>{id}</p>
+   <p>Kykkelsrudveien 47, Askim 1815</p>
    <p>In maximus erat ac sollicitudin volutpat. Phasellus libero neque, bibendum sit amet metus vel, gravida dictum elit. Nullam magna libero, efficitur pretium nulla at, feugiat cursus mi. Ut non nulla ipsum. Nam eu sapien auctor arcu iaculis blandit. Ut enim risus, maximus ut elit ut, egestas consequat tortor. Sed eu dolor vel dui imperdiet porta tempor nec nisi.</p>
-   <a className="cta-login" href="/enquiry"> Send enquiry</a>
+   </div>
+   <div className="cta-enquiry">
+   <p>2 adults, 1 room</p>
+   <p> 12.aug-14.aug</p>
+   <a className="cta-sendequiry" href="/enquiry"> Send enquiry</a>
+   </div>
+   </div>
   </div>
  );
 }

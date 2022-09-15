@@ -1,6 +1,7 @@
 import { Link, useHistory } from "react-router-dom";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
+import bilde from "../../images/bilde.jpg";
 
 
 function Nav() {
@@ -23,7 +24,7 @@ function Nav() {
 					|<Link to="/enquiry">Enquiry</Link> <Link to="/admin">Messages</Link>  <Link to="/dashboard">Dashboard</Link>  <button className="cta-login" onClick={logout}>Log out</button>
 				</>
 			) : (
-				<Link to="/login">Login</Link>
+				<Link className="cta-login" to="/login">Login</Link>
 			)}
 			
 		</nav>

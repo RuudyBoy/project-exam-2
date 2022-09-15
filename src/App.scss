@@ -1,6 +1,7 @@
 //navbar
 nav {
-    background-color:transparent;
+    background-color:white;
+    padding: 10px;
 }
 
 .nav-link {
@@ -12,8 +13,12 @@ nav {
     text-decoration: none;
 }
 
+
 a {
     text-decoration: none;
+}
+
+nav a {
     margin-left: 10px;
 }
 
@@ -30,13 +35,30 @@ a {
     margin-left: 10px;
 }
 
+.cta-login {
+    font-weight: bold;
+    border: none;
+    background-color:#2f74e9 ;
+    color: white;
+    padding: 5px 1em;
+    border-radius: 10px;
+    margin: 10px;
+    margin-bottom: 10px;
+}
 
-//Body
+.cta-login:hover {
+    background-color: #2d68cc;
+    transition: 0.5s;
+}
+
+
+//Body & Fonts
 
 body {
     text-align: center;
     background-image: url(./images/bakgrunn.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -45,23 +67,41 @@ h1 {
     color: #2f74e9;
 }
 
+p {
+    max-width: 500px;
+    margin: 10px auto;
+    font-size:small;
+    color: white;
+}
+
+
+//Home page
 
 
 .home-cta {
-    background-color: #2d68cc;
+    background-color: #2f74e9;
     color: white;
-    padding: 15px 20px ;
-    border-radius: 10px;
+    padding: 15px 20px;
 }
-p {
-    color: black;
-}
+
 
 .home-cta:hover{
     color: white;
-    background-color: #2f74e9;
+    background-color: #2d68cc;
     padding: 16px 21px ;
-    border-radius: 10px;
+}
+
+.home-page {
+ margin-top: 20%;
+}
+
+.home-page h1 {
+    font-size: 60px;
+}
+
+.home-page h2 {
+    color: #f7f7f7;
+    margin-bottom: 20px;
 }
 
 //Hotel page
@@ -69,11 +109,10 @@ p {
 
 .hotel {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1000px;
     background-color: #f7f7f7;
     margin: 10px auto;
-    border-radius: 10px;
     border: none;
 }
 
@@ -84,32 +123,91 @@ p {
 }
 
 .hotel-show {
-    max-width: 500px;
+   text-align: left;
    background-color: white;
-   margin: 10px auto;
+   margin: 15px;
    border: none;
+   padding: 5px;
    border-radius: 10px;
 }
+
+.hotel-show h2 {
+    color: #2f74e9;
+    margin-left: 10px;
+}
 .hotel p {
-    max-width: 500px;
-    margin: 0px auto;
+    font-size: 1em;
     color: black;
     padding: 10px;
+}
+
+.cta-hotel {
+    border: 2px solid #2f74e9;
+    padding: 5px 1em;
+}
+
+.cta-hotel:hover {
+    border: 2px solid #2f74e9;
+    padding: 5px 1em;
+    background-color: #2f74e9;
+    color: #f7f7f7;
+    transition: 0.5s;
 }
 
 //Hotel info page
 
 .hotel-cover {
-    max-width: 100px;
+    width: 100%;
+    height: 80%;
+}
+
+.hotel-info {
+    max-width: 1500px;
+    margin: 0px auto;
+    background-color: white;
 }
 
 
-.form-error {
-    background-color: orange;
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
-    color: aliceblue;
+.hotel-info p {
+    color: black;
+}
+
+
+
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+} 
+
+.cta-enquiry {
+    width: 300px;
+    display: inline-block;
+    margin: 10px auto;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    padding: 10px;
+}
+
+.cta-enquiry p {
+    margin-bottom: 20px;
+}
+
+.cta-sendequiry {
+    padding: 5px 1em;
+    background-color: #2f74e9;
+    color: #f7f7f7;
+    margin-bottom: 0px;
+}
+
+.cta-sendequiry:hover {
+    color: #f7f7f7;
+}
+
+
+.hotel-text {
+    margin: 10px auto;
 }
 
 
@@ -130,6 +228,8 @@ p {
 //Form
 
 .form-design {
+    margin-top: 20px;
+    width: 300px;
     display: inline-block;
     place-items: center;
     background-color: #f7f7f7;
@@ -138,30 +238,40 @@ p {
     border-radius: 10px;
 }
 
-.cta-login {
-    font-weight: bold;
+
+
+.form-error {
+    background-color: orange;
+    padding: 20px;
     border: none;
-    background-color:#2f74e9 ;
-    color: white;
-    padding: 5px 15px;
     border-radius: 10px;
-    margin: 10px;
-    margin-bottom: 10px;
+    color: aliceblue;
 }
 
-.cta-login:hover {
-    background-color: #2d68cc;
-    transition: 0.5s;
+
+.form-title {
+    margin-bottom: 20px;
 }
+
+.cta-form {
+    background-color: #2f74e9;
+    border: none;
+    color: #f7f7f7;
+    padding: 5px 1em;
+}
+
 
 input {
+    width: 100%;
+    padding: 5px;
     border: none;
-    border-radius: 10px;
-    margin: 10px;
+    margin: 10px auto;
 }
 
 label {
-    display: block;
+    display: flex;
+    color: #2d68cc;
+    font-weight: 300;
 }
 
 

@@ -65,7 +65,7 @@ export default function LoginForm() {
 			<form className="form-design"onSubmit={handleSubmit(onSubmit)}>
             {loginError && <FormError>{loginError}</FormError>}
             <fieldset disabled={submitting}>
-				<h1>Login</h1>
+				<h1 className="form-title">Login</h1>
                 <div>
 				<label>Email</label>
                     <input name="email" {...register("email", { required: true, maxLength: 5})} />
@@ -76,7 +76,7 @@ export default function LoginForm() {
                     <input name="password" {...register("password", { required: true })} />
 					{errors.password && <FormError>This field is required</FormError>}
                 </div>
-            <button className="cta-login">{submitting ? "Loggin in..." : "Login"}</button>
+            <button className="cta-form">{submitting ? "Loggin in..." : "Login"}</button>
             </fieldset>
 			</form>
 		</>

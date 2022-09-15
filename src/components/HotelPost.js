@@ -39,7 +39,7 @@ function HotelPost() {
   return <div>Klikker</div>;
  }
 
- return (
+ return ( 
     <div className="hotel">
      {hotels.map(function (hotel) {
       const {id, attributes} = hotel;
