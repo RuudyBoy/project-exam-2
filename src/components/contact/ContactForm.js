@@ -6,12 +6,15 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import FormError from "../common/FormError";
 import { BASE_URL } from "../../constants/api";
-import AuthContext from "../../context/AuthContext";
 import Heading from '../layout/Heading';
+import { FaSignInAlt } from "react-icons/fa";
 
 
 
- const url =  BASE_URL + "messages";
+
+
+
+const url =  BASE_URL + "messages";
 
 
 const schema =yup.object({
@@ -25,27 +28,32 @@ export default function ContactForm() {
     const [submitting] = useState(false);
 	const [loginError, setLoginError] = useState(null);
 
-	
-
     
 	const { register, handleSubmit, formState:{ errors } } = useForm({
         resolver: yupResolver(schema)
       });
 
     
-      async function onSubmit(data) {
+      async function onSubmit(name, subject, message) {
+
+		const data = JSON.stringify({ identifier: name, password: subject, password: message });
+
+		const options = {
+			method: "POST",
+			body: data,
+			headers: {
+				"Content-Type": "application/json",
+			},
+		};
 	
 		console.log(data);
 
 		try {
-			const response = await axios.post(url, {data : {
-                "message": "nytt hotell",
-                "subject": "hotellbooking",
-                "name": "Kåre"
-            }} );
-			console.log("response", response.data);
+			const response = await axios.post(url, options)
 			console.log(url);
 			console.log(data);
+			console.log("response", response.data);
+			
 			
 		} catch (error) {
 			console.log("error", error);
@@ -68,7 +76,7 @@ export default function ContactForm() {
                 </div>
                 <div>
 				<label>subject</label>
-                    <input name="subject" type={"subject"} {...register("subject", { required: true })} />
+                    <input name="subject" type={"subject"}  {...register("subject", { required: true })} />
 					{errors.message && <FormError>This field is required</FormError>}
                 </div>
 				<div>
@@ -76,7 +84,7 @@ export default function ContactForm() {
                     <input name="message" type={"message"} {...register("message", { required: true })} />
 					{errors.message && <FormError>This field is required</FormError>}
                 </div>
-            <button className="cta-form">{submitting ? "Sending message..." : "Send"}</button>
+            <button className="cta-form">{submitting ? "Sending message..." : "SEND"} <FaSignInAlt/></button>
             </fieldset>
 			</form>
 		</>
