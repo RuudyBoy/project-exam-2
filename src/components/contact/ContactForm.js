@@ -63,17 +63,17 @@ export default function ContactForm() {
 			<Heading className="form-title" title="Contact" />
                 <div>
 					<label>Full name</label>
-                    <input name="name" {...register("name", { required: true, maxLength: 5})} />
+                    <input name="name" type={"name"} {...register("name", { required: true, maxLength: 5})} />
 					{errors.name && <FormError>This field is required</FormError>}
                 </div>
                 <div>
 				<label>subject</label>
-                    <input name="subject" {...register("subject", { required: true })} />
+                    <input name="subject" type={"subject"} {...register("subject", { required: true })} />
 					{errors.message && <FormError>This field is required</FormError>}
                 </div>
 				<div>
 					<label>Message</label>
-                    <input name="message" {...register("message", { required: true })} />
+                    <input name="message" type={"message"} {...register("message", { required: true })} />
 					{errors.message && <FormError>This field is required</FormError>}
                 </div>
             <button className="cta-form">{submitting ? "Sending message..." : "Send"}</button>

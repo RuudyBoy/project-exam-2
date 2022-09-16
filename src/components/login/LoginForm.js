@@ -68,12 +68,12 @@ export default function LoginForm() {
 				<h1 className="form-title">Login</h1>
                 <div>
 				<label>Email</label>
-                    <input name="email" {...register("email", { required: true, maxLength: 5})} />
+                    <input name="email" type={"email"} {...register("email", { required: true, maxLength: 5})} />
 					{errors.email && <FormError>This field is required</FormError>}
                 </div>
 				<div>
 					<label>Password</label>
-                    <input name="password" {...register("password", { required: true })} />
+                    <input name="password" type={"password"} {...register("password", { required: true })} />
 					{errors.password && <FormError>This field is required</FormError>}
                 </div>
             <button className="cta-form">{submitting ? "Loggin in..." : "Login"}</button>

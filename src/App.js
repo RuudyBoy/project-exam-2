@@ -13,6 +13,8 @@ import LoginPage from "./components/login/LoginPage";
 import Contact from "./components/contact/Contact";
 import About from "./components/about/About";
 import ContactPost from "./components/admin/ContactPost";
+import Footer from "./components/layout/footer";
+
 
 
 function App() {
@@ -46,9 +48,11 @@ function App() {
             <Route path="/dashboard" exact>
 						<DashboardPage />
 					</Route>
+          
         </Switch>
       </Container>
     </Router>
+    <Footer />
     </AuthProvider>
   );
 }
