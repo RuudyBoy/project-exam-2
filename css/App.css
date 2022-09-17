@@ -58,6 +58,8 @@ nav a:hover {
 }
 
 body {
+  height: 100%;
+  margin: 0;
   text-align: center;
   background-image: url(./images/bakgrunn.jpg);
   background-size: cover;
@@ -340,12 +342,23 @@ label {
 }
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  margin-top: auto;
   color: white;
   background-color: #2f74e9;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footer label {

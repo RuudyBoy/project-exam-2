@@ -1,6 +1,6 @@
 import "./App.scss";
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, useLocation } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Home from "./components/home/Home";
 import Nav from './components/layout/Nav';
@@ -51,8 +51,8 @@ function App() {
           
         </Switch>
       </Container>
+      <Footer />
     </Router>
-    <Footer />
     </AuthProvider>
   );
 }

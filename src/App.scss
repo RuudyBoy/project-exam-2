@@ -61,6 +61,8 @@ nav a:hover {
 //Body & Fonts
 
 body {
+    height: 100%;
+    margin: 0;
     text-align: center;
     background-image: url(./images/bakgrunn.jpg);
     background-size: cover;
@@ -355,14 +357,21 @@ label {
 //Footer 
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom:0;
-    right:0;
+    
+    margin-top:auto;
     color: white;
     background-color: #2f74e9;
    
 }
+
+html, body, #root {
+    height: 100%;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+   }
 
 .footer label {
     display: grid;
