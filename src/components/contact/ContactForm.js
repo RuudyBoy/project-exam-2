@@ -12,7 +12,7 @@ import axios from "axios";
 
 
 
-const url = "https://noroff-cors.herokuapp.com/" +  BASE_URL + "messages";
+const url = "https://noroff-cors.herokuapp.com/" +   BASE_URL + "messages";
 
 
 const schema =yup.object({
@@ -37,6 +37,8 @@ export default function ContactForm() {
 		setLoginError(null);
 	
 		console.log(data);
+
+		data.status = "publish";
 
 		try {
 			const response = await axios.post(url, data)
