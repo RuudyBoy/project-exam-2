@@ -3,29 +3,27 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import axios from "axios";
 import FormError from "../common/FormError";
 import { BASE_URL } from "../../constants/api";
 import Heading from '../layout/Heading';
 import { FaSignInAlt } from "react-icons/fa";
+import axios from "axios";
 
 
 
 
-
-
-const url =  BASE_URL + "messages";
+const url = "https://noroff-cors.herokuapp.com/" +  BASE_URL + "messages";
 
 
 const schema =yup.object({
-    name: yup.string().required(),
+    name: yup.string().required("Name is required"),
     message: yup.string().required(),
     subject: yup.string().required(),
   }).required();
 
 export default function ContactForm() {
 	
-    const [submitting] = useState(false);
+	const [submitting, setSubmitting] = useState(false);
 	const [loginError, setLoginError] = useState(null);
 
     
@@ -33,39 +31,33 @@ export default function ContactForm() {
         resolver: yupResolver(schema)
       });
 
-    
-      async function onSubmit(name, subject, message) {
-
-		const data = JSON.stringify({ identifier: name, password: subject, password: message });
-
-		const options = {
-			method: "POST",
-			body: data,
-			headers: {
-				"Content-Type": "application/json",
-			},
-		};
+	  
+      async function onSubmit(data) {
+		setSubmitting(true);
+		setLoginError(null);
 	
 		console.log(data);
 
 		try {
-			const response = await axios.post(url, options)
-			console.log(url);
-			console.log(data);
+			const response = await axios.post(url, data)
 			console.log("response", response.data);
 			
-			
+
 		} catch (error) {
 			console.log("error", error);
 			console.log( error.response)
             setLoginError(error.toString());
 		} 
+		finally {
+			setSubmitting(false);
+			console.log(false);
+		}
 	}
 
 	
 	return (
 		<>
-			<form className="form-design"onSubmit={handleSubmit(onSubmit)}>
+			<form className="form-design" onSubmit={handleSubmit(onSubmit)}>
             {loginError && <FormError>{loginError}</FormError>}
             <fieldset disabled={submitting}>
 			<Heading className="form-title" title="Contact" />

@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import axios from "axios";
 import AuthContext from "../context/AuthContext";
-import { BASE_URL } from "../constants/api";
+import { AXIOS_URL } from "../constants/api";
 
-const url = BASE_URL ;
+const url = AXIOS_URL ;
 
 export default function useAxios() {
  const [auth] = useContext(AuthContext);

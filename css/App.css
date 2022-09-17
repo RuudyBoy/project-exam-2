@@ -145,6 +145,13 @@ a {
   padding-bottom: 10px;
 }
 
+.hotel-show:hover {
+  -webkit-box-shadow: 4px 6px #2d68cc;
+          box-shadow: 4px 6px #2d68cc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .hotel-show h2 {
   color: white;
   background-color: #2f74e9;
