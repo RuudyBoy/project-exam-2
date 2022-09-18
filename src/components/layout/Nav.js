@@ -33,7 +33,7 @@ function Nav() {
 					|<Link to="/enquiry">Enquiry</Link> <Link to="/admin">Messages</Link>  <Link to="/dashboard">Dashboard</Link>  <button className="cta-login" onClick={logout}>LOGOUT</button>
 				</>
 			) : (
-				<Link className="cta-login"  to="/login"> LOGIN</Link>
+				<Link className="cta-login"  to="/login"> LON</Link>
 			)}
 		</nav>
 		</Navbar.Collapse>
