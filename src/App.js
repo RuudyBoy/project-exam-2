@@ -1,7 +1,6 @@
 import "./App.scss";
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, useLocation } from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from "./components/home/Home";
 import Nav from './components/layout/Nav';
 import DashboardPage from './components/dashboard/DashboardPage';
@@ -19,10 +18,9 @@ import Footer from "./components/layout/footer";
 
 function App() {
   return (
-    <AuthProvider>
+   <AuthProvider>
     <Router>
       <Nav />
-      <Container>
         <Switch>
         <Route path="/" exact>
             <Home />
@@ -48,9 +46,7 @@ function App() {
             <Route path="/dashboard" exact>
 						<DashboardPage />
 					</Route>
-          
         </Switch>
-      </Container>
       <Footer />
     </Router>
     </AuthProvider>
@@ -58,3 +54,4 @@ function App() {
 }
 
 export default App;
+
