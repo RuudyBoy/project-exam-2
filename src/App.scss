@@ -149,7 +149,8 @@ p {
     color:white;
     background-color: #2f74e9;
 }
-.hotel-p {
+.text {
+    text-align: left;
     width: 80%;
     color:#707070 ;
     padding: 10px;
@@ -219,7 +220,10 @@ p {
 }
 
 .cta-sendequiry:hover {
+    padding: 5px 1em;
+    background: linear-gradient(#2d68cc, #031CA6);
     color: #f7f7f7;
+    transition: 0.5s;
 }
 
 
@@ -448,6 +452,12 @@ html, body, #root {
         display: grid;
     }
 
+    //Form 
+
+    form {
+        margin-bottom: 20px;
+    }
+
     //Home page
     .home-page h1 {
         font-size: 30px;
@@ -472,10 +482,36 @@ html, body, #root {
         grid-template-columns: 1fr 1fr;
     }
 
+    //Hotel detail
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
     //Footer page
 
     .grid-footer {
         grid-template-columns: 1fr;
+    }
+
+    .footer h3 {
+        font-size: 15px;
+    }
+
+    .footer p {
+        font-size: 10px;
+    }
+
+    .footer input {
+        display: none;
+    }
+
+    .footer button {
+        display: none;
+    }
+
+    .some {
+        font-size: 15px;
     }
 
     //About page
@@ -494,6 +530,11 @@ html, body, #root {
     .logo-login {
         font-size: 30px;
     }
+
+    //Dashboard
+    .dashboard {
+        grid-template-columns: 1fr;
+     }
 
 }
 

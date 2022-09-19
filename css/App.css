@@ -139,7 +139,8 @@ a {
   background-color: #2f74e9;
 }
 
-.hotel-p {
+.text {
+  text-align: left;
   width: 80%;
   color: #707070;
   padding: 10px;
@@ -206,7 +207,12 @@ a {
 }
 
 .cta-sendequiry:hover {
+  padding: 5px 1em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2d68cc), to(#031CA6));
+  background: linear-gradient(#2d68cc, #031CA6);
   color: #f7f7f7;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .hotel-text {
@@ -430,6 +436,9 @@ html, body, #root {
     display: -ms-grid;
     display: grid;
   }
+  form {
+    margin-bottom: 20px;
+  }
   .home-page h1 {
     font-size: 30px;
     text-shadow: 2px 1px black;
@@ -448,9 +457,28 @@ html, body, #root {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
+  .info-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
   .grid-footer {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .footer h3 {
+    font-size: 15px;
+  }
+  .footer p {
+    font-size: 10px;
+  }
+  .footer input {
+    display: none;
+  }
+  .footer button {
+    display: none;
+  }
+  .some {
+    font-size: 15px;
   }
   .about-grid {
     -ms-grid-columns: 1fr;
@@ -463,6 +491,10 @@ html, body, #root {
   }
   .logo-login {
     font-size: 30px;
+  }
+  .dashboard {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 

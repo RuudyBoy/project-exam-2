@@ -57,7 +57,7 @@ function HotelDetail() {
    <h1>{hotel.data.attributes.hotel}</h1>
    <p>Rating:{hotel.data.attributes.rating}/5</p>
    <p>Kykkelsrudveien 47, Askim 1815</p>
-   <p>{hotel.data.attributes.text}</p>
+   <p className="text">{hotel.data.attributes.text}</p>
    </div>
    <div className="cta-enquiry">
    <p>2 adults, 1 room</p>
