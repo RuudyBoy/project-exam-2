@@ -1,6 +1,6 @@
-import { FaHandPointRight, FaInfo, FaInfoCircle } from "react-icons/fa";
+import { FaHandPointRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import  bilde  from "../images/bilde.jpg";
+//import  bilde  from "../images/bilde.jpg";
 
 function HotelItem({id, attributes }) {
  return (

@@ -40,10 +40,11 @@ export default function LoginForm() {
 
 		try {
 			const response = await axios.post(url,  {
-				identifier: "project@exam.com",
-				password: "Exam2022"
+				identifier: data.email,
+				password: data.password
 			});
 			console.log("response", response.data);
+			console.log(data.email);
 			console.log(url);
 			console.log(data);
 			setAuth(response.data);
@@ -73,7 +74,7 @@ export default function LoginForm() {
                 </div>
 				<div>
 					<label>Password</label>
-                    <input name="password" type={"password"} {...register("password", { required: true })} />
+                    <input name="password"  type={"password"} {...register("password", { required: true })} />
 					{errors.password && <FormError>This field is required</FormError>}
                 </div>
             <button className="cta-form">{submitting ? "Loggin in..." : "Login"}</button>

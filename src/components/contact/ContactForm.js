@@ -1,13 +1,14 @@
+import { BASE_URL } from "../../constants/api";
 import { useState} from "react";
 import React from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import FormError from "../common/FormError";
-import { BASE_URL } from "../../constants/api";
-import Heading from '../layout/Heading';
-import { FaSignInAlt } from "react-icons/fa";
 import axios from "axios";
+import FormError from "../common/FormError";
+import Heading from "../layout/Heading";
+import { FaSignInAlt } from "react-icons/fa";
+
 
 
 
@@ -22,9 +23,11 @@ const schema =yup.object({
   }).required();
 
 export default function ContactForm() {
-	
-    const [submitting] = useState(false);
+	const [submitting, setSubmitting] = useState(false);
 	const [loginError, setLoginError] = useState(null);
+	
+    
+
 	
 
     
@@ -34,30 +37,37 @@ export default function ContactForm() {
 
     
       async function onSubmit(data) {
+
+		setSubmitting(true);
+        setLoginError(null);
 	
 		console.log(data);
 
 		try {
-			const response = await axios.post(url,  { "data": {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(),
+			const response = await axios.post(url, { "data": {
+				 name: data.name,
+                 subject: data.subject,
+				 message: data.message
 			}
-				
-		});
-
+               
+            });
 			console.log("response", response.data);
 			console.log(url);
+			console.log(data);
+			if (response) {
+				
+			}
+			
 
-		
 			
 		} catch (error) {
 			console.log("error", error);
 			console.log( error.response)
             setLoginError(error.toString());
-		} 
+		} finally {
+			setSubmitting(false);
+			console.log(false);
+		}
 	}
 
 	
@@ -88,5 +98,11 @@ export default function ContactForm() {
 		</>
 	);
 }
+
+
+
+
+
+
 
 

@@ -242,6 +242,11 @@ p {
     font-size: 100px;
 }
 
+//Contact 
+.input-design {
+    display: table;
+}
+
 //Form
 
 .form-design {
@@ -310,6 +315,10 @@ label {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 3px 5px #E4E9E4;
+}
+
+.messages p {
+    color: black;
 }
 
 .message-container {

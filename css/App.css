@@ -226,6 +226,10 @@ a {
   font-size: 100px;
 }
 
+.input-design {
+  display: table;
+}
+
 .form-design {
   margin-top: 20px;
   width: 300px;
@@ -290,6 +294,10 @@ label {
   border-radius: 10px;
   -webkit-box-shadow: 3px 5px #E4E9E4;
           box-shadow: 3px 5px #E4E9E4;
+}
+
+.messages p {
+  color: black;
 }
 
 .message-container {
