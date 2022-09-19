@@ -395,6 +395,36 @@ html, body, #root {
   font-size: 30px;
 }
 
+.dashboard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.dashboard-card {
+  background-color: white;
+  margin: 15px;
+  border: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 5px #E4E9E4;
+          box-shadow: 3px 5px #E4E9E4;
+  padding-bottom: 10px;
+}
+
+.dashboard-card:hover {
+  -webkit-box-shadow: 3px 5px #2d68cc;
+          box-shadow: 3px 5px #2d68cc;
+}
+
+.dashboard-card p {
+  color: #2d68cc;
+}
+
+.dashboard-icon {
+  font-size: 30px;
+}
+
 @media (max-width: 1000px) {
   nav.mr-auto {
     display: -ms-grid;

@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
 import Heading from "../layout/Heading";
 import BookList from "./ContactList";
+import EnquiryList from "./EnquiryInbox";
+import NewHotel from "./NewHotel";
 
 export default function ContactPost() {
 	return (
@@ -10,6 +13,9 @@ export default function ContactPost() {
 		<div className="message-container">
 			< BookList />
 		</div>
+		<h1>Enquiries</h1>
+		<EnquiryList/>
+		< NewHotel/>
 		</>
 	);
 }

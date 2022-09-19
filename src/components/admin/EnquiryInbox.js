@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
+import { BASE_URL } from "../../constants/api";
 
-function BookList() {
+
+
+
+const url = BASE_URL + "enquiries"
+function EnquiryList() {
  const [books, setBooks] = useState([]);
  const [loading, setLoading] = useState(true);
  const [error, setError] = useState(null);
@@ -8,7 +13,7 @@ function BookList() {
  useEffect(function () {
   async function fetchData() {
    try {
-    const response = await fetch("https://ruud-exam.herokuapp.com/api/messages");
+    const response = await fetch(url);
 
     if (response.ok) {
      const json = await response.json();
@@ -40,16 +45,20 @@ function BookList() {
     return <div className="messages" key={book.id}>
         <h3>Name</h3>
         <p>{book.attributes.name}</p>
-        <h3>Subject</h3>
-        <p>{book.attributes.subject}</p>
-        <h3>Message</h3>
-        <p>{book.attributes.message}</p>
-        <h4>Message sent:</h4>
-        <p>{book.attributes.publishedAt}</p>
+        <h3>Phonenumber</h3>
+        <p>{book.attributes.number}</p>
+        <h3>Email</h3>
+        <p>{book.attributes.email}</p>
+        <h4>Arrival</h4>
+        <p>{book.attributes.arrival}</p>
+        <h4>Departure</h4>
+        <p>{book.attributes.departure}</p>
+        <h4>Information</h4>
+        <p>{book.attributes.information}</p>
         </div>;
    })}
   </>
  );
 }
 
-export default BookList;
+export default EnquiryList;

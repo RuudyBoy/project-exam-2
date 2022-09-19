@@ -30,7 +30,7 @@ function Nav() {
             <Link to="/about">About </Link>
 			{auth ? (
 				<>
-					|<Link to="/enquiry">Enquiry</Link> <Link to="/admin">Messages</Link>  <Link to="/dashboard">Dashboard</Link>  <button className="cta-login" onClick={logout}>LOGOUT</button>
+					|  <Link to="/dashboard">Dashboard</Link>  <button className="cta-login" onClick={logout}>LOGOUT</button>
 				</>
 			) : (
 				<Link className="cta-login"  to="/login"> LOGIN</Link>

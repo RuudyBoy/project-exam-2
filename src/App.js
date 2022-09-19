@@ -13,6 +13,7 @@ import Contact from "./components/contact/Contact";
 import About from "./components/about/About";
 import ContactPost from "./components/admin/ContactPost";
 import Footer from "./components/layout/footer";
+import Enquiry from "./components/enquiry/enquiry";
 
 
 
@@ -46,6 +47,9 @@ function App() {
             <Route path="/dashboard" exact>
 						<DashboardPage />
 					</Route>
+          <Route path="/enquiry">
+							< Enquiry/>
+						</Route>
         </Switch>
       <Footer />
     </Router>
