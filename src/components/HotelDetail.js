@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useParams, useHistory } from "react-router-dom";
 import { BASE_URL } from "../constants/api";
 
@@ -62,7 +63,7 @@ function HotelDetail() {
    <div className="cta-enquiry">
    <p>2 adults, 1 room</p>
    <p> 12.aug-14.aug</p>
-   <a className="cta-sendequiry" href="/enquiry"> Send enquiry</a>
+   <Link className="cta-sendequiry" to="/enquiry"> Send enquiry</Link>
    
    </div>
    </div>

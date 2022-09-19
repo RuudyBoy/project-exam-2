@@ -8,7 +8,7 @@ export default function Home() {
     <div className='home-page'>
       <Heading title="Welcome to Holidaze!" />
       <h2>Find a hotel in the beatiful city of Bergen.</h2>
-      <Link className='home-cta'><FaHotel /> BOOK HOTEL</Link>
+      <Link className='home-cta' to="/hotels"><FaHotel /> BOOK HOTEL</Link>
     </div>
     </>
   );
