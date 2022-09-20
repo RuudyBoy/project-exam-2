@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import {  FaRegEnvelope, FaUserCircle } from "react-icons/fa";
 
-function BookList() {
+function MessageList() {
  const [books, setBooks] = useState([]);
  const [loading, setLoading] = useState(true);
  const [error, setError] = useState(null);
@@ -38,18 +39,14 @@ function BookList() {
   <>
    {books.map(function (book) {
     return <div className="messages" key={book.id}>
-        <h3>Name</h3>
-        <p>{book.attributes.name}</p>
-        <h3>Subject</h3>
-        <p>{book.attributes.subject}</p>
-        <h3>Message</h3>
-        <p>{book.attributes.message}</p>
-        <h4>Message sent:</h4>
-        <p>{book.attributes.publishedAt}</p>
+        <p className="message-name"> < FaUserCircle/> {book.attributes.name}</p> <hr></hr>
+        <p className="message-subject">< FaRegEnvelope/> {book.attributes.subject}</p>
+        <p className="text">  {book.attributes.message}</p>
+       
         </div>;
    })}
   </>
  );
 }
 
-export default BookList;
+export default MessageList;

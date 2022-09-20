@@ -46,9 +46,8 @@ body {
   height: 100%;
   margin: 0;
   text-align: center;
-  background-image: url(./images/bakgrunn.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#363535));
+  background: linear-gradient(black, #363535);
 }
 
 h1 {
@@ -141,9 +140,8 @@ a {
 
 .text {
   text-align: left;
-  width: 80%;
   color: #707070;
-  padding: 10px;
+  padding-left: 5px;
 }
 
 .cta-hotel {
@@ -172,10 +170,6 @@ a {
   max-width: 1500px;
   margin: 0px auto;
   background-color: white;
-}
-
-.hotel-info p {
-  color: black;
 }
 
 .info-grid {
@@ -293,29 +287,6 @@ label {
   font-weight: 300;
 }
 
-.messages {
-  background-color: white;
-  color: #2d68cc;
-  margin: 10px;
-  border-radius: 10px;
-  -webkit-box-shadow: 3px 5px #E4E9E4;
-          box-shadow: 3px 5px #E4E9E4;
-}
-
-.messages p {
-  color: black;
-}
-
-.message-container {
-  display: -ms-grid;
-  display: grid;
-  background-color: #f7f7f7;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-}
-
 .about-grid {
   display: -ms-grid;
   display: grid;
@@ -429,6 +400,73 @@ html, body, #root {
 
 .dashboard-icon {
   font-size: 30px;
+  color: #2d68cc;
+}
+
+.inbox-title {
+  display: block;
+}
+
+.inbox-container {
+  border-radius: 5px;
+  margin: 10px;
+  background-color: white;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.new-messages {
+  color: #031CA6;
+}
+
+.messages {
+  background-color: white;
+  color: #2d68cc;
+  margin: 10px;
+  border: 1px solid #031CA6;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 5px #031CA6;
+          box-shadow: 3px 5px #031CA6;
+  padding: 5px 1em;
+}
+
+.message-container {
+  display: -ms-grid;
+  display: grid;
+  background-color: white;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.message-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #031CA6;
+  padding-left: 5px;
+  text-align: left;
+}
+
+.message-subject {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: black;
+  padding-left: 5px;
+  text-align: left;
+}
+
+hr {
+  margin: 1px;
+  padding: 0px;
+}
+
+.date {
+  color: #031CA6;
+}
+
+.departure {
+  color: #031CA6;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 @media (max-width: 1000px) {
@@ -452,6 +490,7 @@ html, body, #root {
   .home-cta {
     font-size: 10px;
     padding: 10px;
+    margin-bottom: 20px;
   }
   .hotel {
     -ms-grid-columns: 1fr 1fr;
@@ -495,6 +534,14 @@ html, body, #root {
   .dashboard {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .message-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    max-width: 1000px;
+    margin: auto;
   }
 }
 

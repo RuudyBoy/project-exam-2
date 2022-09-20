@@ -44,15 +44,14 @@ export default function NewHotel() {
 		console.log(data);
 
 		try {
-			const response = await axios.post(url, { "data": {hotel: data.hotel,
-                 
-                 rating: data.rating,
-				 text: data.text,
-                "data" : {image: data.image}
-				 
+			const response = await axios.post(url, { "data": {
+				hotel: data.hotel,
+                rating: data.rating,
+				text: data.text,
+                image: data.image}
 			}
                
-            });
+            );
 			console.log("response", response.data);
 			console.log(url);
 			console.log(data);

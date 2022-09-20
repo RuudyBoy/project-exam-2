@@ -11,9 +11,11 @@ import HotelDetail from "./components/HotelDetail";
 import LoginPage from "./components/login/LoginPage";
 import Contact from "./components/contact/Contact";
 import About from "./components/about/About";
-import ContactPost from "./components/admin/ContactPost";
 import Footer from "./components/layout/footer";
-import Enquiry from "./components/enquiry/enquiry";
+import MessageInbox from "./components/message-inbox/MessageInbox";
+import EnquiryInbox from "./components/enquiry-inbox/EnquiryInbox";
+import CreateEstablishment from "./components/new-establishment/Establisment";
+
 
 
 
@@ -41,14 +43,20 @@ function App() {
           <Route path="/login">
 							<LoginPage />
 						</Route>
-            <Route path="/admin">
-						< ContactPost/>
+            <Route path="/new-establishment">
+						< CreateEstablishment/>
 					</Route>
             <Route path="/dashboard" exact>
 						<DashboardPage />
 					</Route>
-          <Route path="/enquiry">
-							< Enquiry/>
+          <Route path="/message-inbox">
+						< MessageInbox/>
+					</Route>
+          <Route path="/enquiry-inbox">
+						< EnquiryInbox/>
+					</Route>
+          <Route path="/enquiry-inbox">
+							< EnquiryInbox/>
 						</Route>
         </Switch>
       <Footer />

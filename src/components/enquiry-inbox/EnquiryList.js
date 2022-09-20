@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { FaAsterisk, FaAt, FaPhone, FaRegCalendarAlt, FaRegEnvelope, FaUserCircle, FaWalking } from "react-icons/fa";
 import { BASE_URL } from "../../constants/api";
 
 
@@ -43,18 +44,18 @@ function EnquiryList() {
   <>
    {books.map(function (book) {
     return <div className="messages" key={book.id}>
-        <h3>Name</h3>
-        <p>{book.attributes.name}</p>
-        <h3>Phonenumber</h3>
-        <p>{book.attributes.number}</p>
-        <h3>Email</h3>
-        <p>{book.attributes.email}</p>
-        <h4>Arrival</h4>
-        <p>{book.attributes.arrival}</p>
-        <h4>Departure</h4>
-        <p>{book.attributes.departure}</p>
-        <h4>Information</h4>
-        <p>{book.attributes.information}</p>
+      
+        <p className="message-name">< FaUserCircle/> {book.attributes.name}</p>
+       
+        <p className="message-name"> <FaPhone/> {book.attributes.number}</p>
+      
+        <p className="text"> <FaAt/> {book.attributes.email}</p>
+      
+        <p className="text"><FaRegCalendarAlt/> Arrival: {book.attributes.arrival}</p>
+       
+        <p className="text"><FaRegCalendarAlt/> Departure: {book.attributes.departure}</p>
+       
+        <p className="text">< FaRegEnvelope/> {book.attributes.information}</p>
         </div>;
    })}
   </>
