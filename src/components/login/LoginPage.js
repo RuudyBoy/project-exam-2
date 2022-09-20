@@ -4,6 +4,7 @@ import LoginForm from "./LoginForm";
 export default function LoginPage() {
 	return (
 		<>
+		<div className="bck">
 		<div className="login-container">
 		<div>
 			<h1 className="logo-login">Holzinger</h1>
@@ -13,6 +14,7 @@ export default function LoginPage() {
 			<Heading content="Login" />
 			<LoginForm />
 		</div>
+			</div>
 			</div>
 		</>
 	);
