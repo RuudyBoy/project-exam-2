@@ -8,6 +8,7 @@ export default function Footer() {
         <div className='phone-support'>
             <h3>Phone support</h3>
             <p>< FaPhone/> +98746342514</p>
+            <p>Copyright <FaRegCopyright/> 2022</p>
         </div>
         <div className='follow-us'>
             <h3>Follow us</h3>
@@ -21,11 +22,9 @@ export default function Footer() {
             <label>Subscribe here</label>
             <p> < FaHandPointDown/> </p>
             <input className="subscribe-input" name="email" type={"email"}></input><button>Send</button>
-        </div>
-        
-    </div><div className='copyright'>
-          <p>Copyright <FaRegCopyright/> 2022</p>
-        </div></div>
+        </div>  
+    </div>
+    </div>
     </>
   );
 }
