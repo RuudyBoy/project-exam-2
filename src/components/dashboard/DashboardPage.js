@@ -4,7 +4,8 @@ import Heading from "../layout/Heading";
 
 export default function DashboardPage() {
 	return (
-		<>
+		<>	
+		<div className="background">
 		<Heading content="Dashboard" />
 		<h1>Dashboard</h1>
 		<div className="dashboard">
@@ -30,7 +31,7 @@ export default function DashboardPage() {
 			</div>
 			</Link>
 		</div>
-			
+			</div>
 		</>
 	);
 }

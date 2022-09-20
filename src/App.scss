@@ -53,8 +53,18 @@ body {
     height: 100%;
     margin: 0;
     text-align: center;
-    background:linear-gradient(black, #363535); 
+   
 }
+
+.background {
+background: url(./images/bakgrunn.jpg);
+height:100vh;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+
 
 
 
