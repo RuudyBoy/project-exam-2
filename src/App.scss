@@ -72,6 +72,14 @@ background-repeat: no-repeat;
     background-repeat: no-repeat;
     }
 
+    .bckg {
+        background:linear-gradient(black, #363535);
+        height:100vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+
 
 
 
@@ -107,6 +115,11 @@ p {
     padding: 15px 50px;
 }
 
+
+.home-page {
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
 
 .home-cta:hover{
     color: white;
@@ -261,7 +274,8 @@ p {
 //Form
 
 .form-design {
-    margin-top: 20px;
+    margin-top: 70px;
+    margin-bottom: 20px;
     width: 300px;
     display: inline-block;
     place-items: center;
@@ -359,7 +373,7 @@ html, body, #root {
   #root {
     display: flex;
     flex-direction: column;
-    background:linear-gradient(black, #363535); 
+ 
    }
 
 .footer label {
@@ -612,6 +626,10 @@ hr {
 
     .hotel {
         grid-template-columns: 1fr;
+    }
+
+    .hotel-show {
+        width: 300px;
     }
 
 

@@ -40,12 +40,14 @@ function HotelPost() {
  }
 
  return ( 
+   <div className='bckg' >
     <div className="hotel">
      {hotels.map(function (hotel) {
       const {id, attributes} = hotel;
       console.log(hotel);
       return <HotelItem key={id}  id={id} attributes={attributes.image.data.attributes.url} />;
      })}
+    </div>
     </div>
    );
 }
