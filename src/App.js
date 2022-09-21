@@ -15,6 +15,7 @@ import Footer from "./components/layout/footer";
 import MessageInbox from "./components/message-inbox/MessageInbox";
 import EnquiryInbox from "./components/enquiry-inbox/EnquiryInbox";
 import CreateEstablishment from "./components/new-establishment/Establisment";
+import Enquiry from "./components/enquiry/enquiry";
 
 
 
@@ -55,8 +56,8 @@ function App() {
           <Route path="/enquiry-inbox">
 						< EnquiryInbox/>
 					</Route>
-          <Route path="/enquiry-inbox">
-							< EnquiryInbox/>
+          <Route path="/enquiry">
+							< Enquiry/>
 						</Route>
         </Switch>
       <Footer />

@@ -63,8 +63,7 @@ function HotelDetail() {
    <div className="cta-enquiry">
    <p>2 adults, 1 room</p>
    <p> 12.aug-14.aug</p>
-   <Link className="cta-sendequiry" to="/enquiry"> Send enquiry</Link>
-   
+   <Link  to="/enquiry"className="cta-sendequiry"> Send enquiry</Link>
    </div>
    </div>
    <hr/>

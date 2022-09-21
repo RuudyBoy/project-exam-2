@@ -1,3 +1,5 @@
+
+
 //navbar
 
 nav {
@@ -323,14 +325,7 @@ p {
     padding: 5px 1em;
 }
 
-.form-design h1 {
-    background-color: #2d68cc;
-    border-radius: 5px;
-    background-size: cover;
-    color: white;
-    margin: 0px;
-    width: 100%;
-}
+
 
 .cta-form:hover {
     background: linear-gradient(#2d68cc, #031CA6);
@@ -535,11 +530,11 @@ hr {
 
 //Smaller screens
 
-@media (max-width: 1000px) {
+@media (max-width: 986px) {
 
     //Nav
 
-    nav.mr-auto {
+    nav {
         display: grid;
     }
 
