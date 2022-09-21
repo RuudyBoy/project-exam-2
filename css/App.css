@@ -58,31 +58,6 @@ body {
   text-align: center;
 }
 
-.background {
-  background: url(./images/bakgrunn.jpg);
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.bck {
-  background: url(./images/pexels-nextvoyage-3580098.jpg);
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.bckg {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0f0f12), to(#000000));
-  background: linear-gradient(#0f0f12, #000000);
-  height: auto;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 h1 {
   color: #2f74e9;
 }
@@ -102,6 +77,31 @@ p {
 
 a {
   font-family: 'Open Sans', sans-serif;
+}
+
+.background {
+  background: url(./images/bakgrunn.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bck {
+  background: url(./images/pexels-nextvoyage-3580098.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bckg {
+  background: -webkit-gradient(linear, left top, right bottom, from(#181818), to(#242323));
+  background: linear-gradient(to bottom right, #181818, #242323);
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .home-cta {
@@ -348,6 +348,11 @@ label {
   color: white;
   background: -webkit-gradient(linear, left top, right bottom, from(#181818), to(#242323));
   background: linear-gradient(to bottom right, #181818, #242323);
+}
+
+.footer-title {
+  font-weight: 600;
+  font-size: large;
 }
 
 html, body, #root {

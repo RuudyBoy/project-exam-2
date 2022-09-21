@@ -6,22 +6,20 @@ export default function Footer() {
     <div className='footer'>
     <div className='grid-footer'>
         <div className='phone-support'>
-            <h3>Phone support</h3>
+            <p className='footer-title'>Phone support</p>
             <p>< FaPhone/> +98746342514</p>
             <p>Copyright <FaRegCopyright/> 2022</p>
         </div>
         <div className='follow-us'>
-            <h3>Follow us</h3>
+            <p  className='footer-title'>Follow us</p>
             <p>Social media</p>
             <FaFacebook className='some' />
             <FaInstagram className='some'/>
             <FaTwitter className='some'/>
         </div>
         <div className='subscribe'>
-            <h3>Our Newsletter</h3>
+            <p className='footer-title'>Our Newsletter</p>
             <label>Subscribe here</label>
-            <p> < FaHandPointDown/> </p>
-            <input className="subscribe-input" name="email" type={"email"}></input><button>Send</button>
         </div>  
     </div>
     </div>

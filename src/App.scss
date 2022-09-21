@@ -72,32 +72,6 @@ body {
    
 }
 
-.background {
-background: url(./images/bakgrunn.jpg);
-height:100vh;
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-}
-
-.bck {
-    background: url(./images/pexels-nextvoyage-3580098.jpg);
-    height:100vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    }
-
-    .bckg {
-        background: linear-gradient(#0f0f12 ,#000000 );
-        height: auto;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        }
-
-
-
 
 h1 {
     color: #2f74e9;
@@ -119,6 +93,38 @@ p {
  a {
     font-family: 'Open Sans', sans-serif;
 }
+
+//Background
+
+.background {
+background: url(./images/bakgrunn.jpg);
+height:100vh;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.bck {
+    background: url(./images/pexels-nextvoyage-3580098.jpg);
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    
+    
+    .bckg {
+        background: linear-gradient( to bottom right, #181818  ,#242323 );
+        height: auto;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+
+
+
+
+
 
 
 //Home page
@@ -378,6 +384,11 @@ label {
     margin-top:auto;
     color: white;
     background: linear-gradient( to bottom right, #181818  ,#242323 );
+}
+
+.footer-title {
+    font-weight: 600;
+    font-size: large;
 }
 
 
