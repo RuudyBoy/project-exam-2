@@ -13,6 +13,17 @@ nav {
 }
 
 
+.navbar {
+    background-color: #2d68cc;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+ .navbar-toggler-icon {
+    color: #E4E9E4 !important;
+}
 
 
 a {
@@ -27,6 +38,8 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+
+//CTA login
 
 
 .cta-login {
@@ -310,6 +323,15 @@ p {
     padding: 5px 1em;
 }
 
+.form-design h1 {
+    background-color: #2d68cc;
+    border-radius: 5px;
+    background-size: cover;
+    color: white;
+    margin: 0px;
+    width: 100%;
+}
+
 .cta-form:hover {
     background: linear-gradient(#2d68cc, #031CA6);
     transition: 0.5s;
@@ -359,12 +381,9 @@ label {
     
     margin-top:auto;
     color: white;
-    background: #363535; 
+    background: #2d68cc; 
 }
 
-.footer h3 {
-    color: #2d68cc;
-}
 
 html, body, #root {
     height: 100%;
@@ -558,13 +577,12 @@ hr {
     //Background images
 
     .bckg {
-        height: fit-content;
+        height: max-content;
     }
-    .background {
-        height: fit-content;
-    }
+
+
     .bck {
-        height: fit-content;
+        height: max-content;
     }
         
 

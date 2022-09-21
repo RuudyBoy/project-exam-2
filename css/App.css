@@ -12,6 +12,18 @@ nav {
           box-shadow: 5px 2px #707070;
 }
 
+.navbar {
+  background-color: #2d68cc;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.navbar-toggler-icon {
+  color: #E4E9E4 !important;
+}
+
 a {
   text-decoration: none;
 }
@@ -291,6 +303,15 @@ a {
   padding: 5px 1em;
 }
 
+.form-design h1 {
+  background-color: #2d68cc;
+  border-radius: 5px;
+  background-size: cover;
+  color: white;
+  margin: 0px;
+  width: 100%;
+}
+
 .cta-form:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#2d68cc), to(#031CA6));
   background: linear-gradient(#2d68cc, #031CA6);
@@ -338,11 +359,7 @@ label {
 .footer {
   margin-top: auto;
   color: white;
-  background: #363535;
-}
-
-.footer h3 {
-  color: #2d68cc;
+  background: #2d68cc;
 }
 
 html, body, #root {
@@ -528,19 +545,14 @@ hr {
         grid-template-columns: 1fr 1fr;
   }
   .bckg {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  .background {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
   .bck {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
   .info-grid {
     -ms-grid-columns: 1fr;
