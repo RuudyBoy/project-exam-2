@@ -3,24 +3,25 @@
 //navbar
 
 nav {
-    padding: 10px;
+   
 }
 .nav-link {
     color: blue;
 }
 
-.bg-dark {
-    background: #363535; 
-    box-shadow: 5px 2px #707070;
-}
 
 
 .navbar {
-    background-color: #2d68cc;
+    background: linear-gradient( to bottom right, #181818  ,#242323 );
 }
 
 .navbar-brand {
     color: white;
+}
+
+.navbar-brand:hover {
+    color: #2f74e9;
+    font-weight: bolder;
 }
 
  .navbar-toggler-icon {
@@ -88,7 +89,7 @@ background-repeat: no-repeat;
     }
 
     .bckg {
-        background:linear-gradient(black, #363535);
+        background: linear-gradient(#0f0f12 ,#000000 );
         height: auto;
         background-position: center;
         background-size: cover;
@@ -376,7 +377,7 @@ label {
     
     margin-top:auto;
     color: white;
-    background: #2d68cc; 
+    background: linear-gradient( to bottom right, #181818  ,#242323 );
 }
 
 

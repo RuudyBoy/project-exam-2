@@ -11,7 +11,7 @@ export default function LoginPage() {
 			<p>Logo her</p>
 		</div>
 		<div>
-			<Heading content="Login" />
+			<Heading content="Sign in" />
 			<LoginForm />
 		</div>
 			</div>
