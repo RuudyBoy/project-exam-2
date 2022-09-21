@@ -69,7 +69,7 @@ body {
 .bckg {
   background: -webkit-gradient(linear, left top, left bottom, from(black), to(#363535));
   background: linear-gradient(black, #363535);
-  height: 100vh;
+  height: auto;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -527,6 +527,21 @@ hr {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
+  .bckg {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .background {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .bck {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
   .info-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -583,6 +598,10 @@ hr {
   }
   .hotel-show {
     width: 300px;
+    margin: 10px auto;
+  }
+  .form-design {
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=App.css.map */
