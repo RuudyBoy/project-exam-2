@@ -74,7 +74,7 @@ background-repeat: no-repeat;
 
     .bckg {
         background:linear-gradient(black, #363535);
-        height:100vh;
+        height: auto;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -555,6 +555,10 @@ hr {
         grid-template-columns: 1fr 1fr;
     }
 
+    .bckg {
+        height: fit-content;
+    }
+
     //Hotel detail
 
     .info-grid {
@@ -630,6 +634,7 @@ hr {
 
     .hotel-show {
         width: 300px;
+        margin: 10px auto;
     }
 
 
