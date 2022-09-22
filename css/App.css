@@ -30,12 +30,12 @@ nav a {
 }
 
 nav a:hover {
-  padding: 1em;
-  background-color: #E4E9E4;
-  border: 1px solid #2d68cc;
-  border-radius: 5px;
-  -webkit-box-shadow: 4px 2px #707070;
-          box-shadow: 4px 2px #707070;
+  padding: 0.5em;
+  border-radius: 2px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0px 3px #031CA6;
+          box-shadow: 0px 3px #031CA6;
 }
 
 .cta-login {
@@ -142,6 +142,7 @@ a {
 }
 
 .hotel {
+  background-color: white;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -155,6 +156,31 @@ a {
   max-width: 100%;
   margin-top: 0px;
   border-radius: 10px 10px 0px 0px;
+}
+
+.hotel-price {
+  color: #181818;
+}
+
+.hotel-inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.hotel-review {
+  text-align: left;
+  padding-left: 5px;
+}
+
+.hotel-inner p {
+  color: black;
+}
+
+.hotel-info {
+  margin-left: 5px;
+  text-align: left;
 }
 
 .hotel-show {
@@ -174,11 +200,6 @@ a {
   transition: 0.5s;
 }
 
-.hotel-show h2 {
-  color: white;
-  background-color: #2f74e9;
-}
-
 .text {
   text-align: left;
   color: #707070;
@@ -195,12 +216,21 @@ a {
   margin: 5px;
 }
 
+.cta-send:hover {
+  padding: 5px 1em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2d68cc), to(#031CA6));
+  background: linear-gradient(#2d68cc, #031CA6);
+  color: #f7f7f7;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .cta-hotel {
-  display: inline;
+  text-align: left;
   color: #2f74e9;
   border: 2px solid #2f74e9;
   padding: 5px 1em;
-  margin-bottom: 0px;
+  margin-left: 5px;
 }
 
 .cta-hotel:hover {
