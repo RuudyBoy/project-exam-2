@@ -48,7 +48,8 @@ export default function NewHotel() {
 				hotel: data.hotel,
                 rating: data.rating,
 				text: data.text,
-                image: data.image}
+                image: data.image
+			}
 			}
                
             );

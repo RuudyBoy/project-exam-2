@@ -16,7 +16,7 @@ nav {
 }
 
 .navbar-brand {
-    color: white;
+    color: #2d68cc;
 }
 
 .navbar-brand:hover {
@@ -39,7 +39,11 @@ nav a {
 }
 
 nav a:hover {
-    text-decoration: underline;
+  padding: 1em;  
+  background-color: #E4E9E4;
+  border: 1px solid #2d68cc;
+  border-radius: 5px;
+  box-shadow: 2px 2px #707070;
 }
 
 //CTA login
