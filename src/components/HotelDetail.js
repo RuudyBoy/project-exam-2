@@ -17,7 +17,7 @@ function HotelDetail() {
   history.push("/");
  }
 
- const url = BASE_URL + "hotels?populate=*/" + id;
+ const url = BASE_URL + "hotels/" + id;
 
  useEffect(
   function () {
@@ -53,25 +53,27 @@ function HotelDetail() {
  }
 
  return (
+   <div className="hotel-background" >   
   <div className="hotel-info"> 
   <img className="image-hotel" src={bilde}></img>
    <div className="info-grid">
  
    <div className="hotel-text">
    <h1>{hotel.data.attributes.hotel}</h1>
-   <p>Rating:{hotel.data.attributes.rating}/5</p>
-   <p>{hotel.data.attributes.price},-</p>
-   <p>For {hotel.data.attributes.Persons} persons</p>
-   <p>Kykkelsrudveien 47, Askim 1815</p>
+   <hr></hr>
+   <p>Bergen</p>
+   <p>Rating:{hotel.data.attributes.rating}/10</p>
+   
    <p className="text">{hotel.data.attributes.text}</p>
    </div>
    <div className="cta-enquiry">
-   <p>2 adults, 1 room</p>
-   <p> 12.aug-14.aug</p>
+   <p> Thon hotels</p>
+   <p>{hotel.data.attributes.price} kr per night</p>
    <Link  to="/enquiry"className="cta-sendequiry"> Send enquiry</Link>
    </div>
    </div>
    <hr/>
+  </div>
   </div>
  );
 }

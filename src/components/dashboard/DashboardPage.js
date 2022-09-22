@@ -1,13 +1,13 @@
 import { FaFileContract, FaHome, FaInbox } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Heading from "../layout/Heading";
+
 
 export default function DashboardPage() {
 	return (
 		<>	
-		<div className="background">
-		<Heading content="Dashboard" />
+		<div className="signin-background">
 		<h1>Dashboard</h1>
+		<h2>Welcome Boss!</h2>
 		<div className="dashboard">
 			<Link className="dashboard-card" to="/message-inbox">
 			<div >

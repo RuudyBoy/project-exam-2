@@ -6,7 +6,6 @@ import Nav from './components/layout/Nav';
 import DashboardPage from './components/dashboard/DashboardPage';
 import "./App.scss"
 import { AuthProvider } from './context/AuthContext';
-import HotelPost from "./components/HotelPost";
 import HotelDetail from "./components/HotelDetail";
 import LoginPage from "./components/login/LoginPage";
 import Contact from "./components/contact/Contact";
@@ -16,6 +15,8 @@ import MessageInbox from "./components/message-inbox/MessageInbox";
 import EnquiryInbox from "./components/enquiry-inbox/EnquiryInbox";
 import CreateEstablishment from "./components/new-establishment/Establisment";
 import Enquiry from "./components/enquiry/enquiry";
+import Hotels from "./components/hotels/Hotels";
+import HotelPost from "./components/HotelPost";
 
 
 
@@ -30,7 +31,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/hotels" exact>
-            <HotelPost />
+            <Hotels />
           </Route>
           <Route path="/detail/:id">
             <HotelDetail />
