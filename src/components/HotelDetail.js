@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams, useHistory } from "react-router-dom";
 import { BASE_URL } from "../constants/api";
+import bilde from "../images/bilde.jpg";
 
 function HotelDetail() {
  const [hotel, setHotel] = useState(null);
@@ -16,7 +17,7 @@ function HotelDetail() {
   history.push("/");
  }
 
- const url = BASE_URL + "hotels/" + id;
+ const url = BASE_URL + "hotels?populate=*/" + id;
 
  useEffect(
   function () {
@@ -52,11 +53,15 @@ function HotelDetail() {
  }
 
  return (
-  <div className="hotel-info">
+  <div className="hotel-info"> 
+  <img className="image-hotel" src={bilde}></img>
    <div className="info-grid">
+ 
    <div className="hotel-text">
    <h1>{hotel.data.attributes.hotel}</h1>
    <p>Rating:{hotel.data.attributes.rating}/5</p>
+   <p>{hotel.data.attributes.price},-</p>
+   <p>For {hotel.data.attributes.Persons} persons</p>
    <p>Kykkelsrudveien 47, Askim 1815</p>
    <p className="text">{hotel.data.attributes.text}</p>
    </div>

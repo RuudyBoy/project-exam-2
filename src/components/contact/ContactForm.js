@@ -17,7 +17,7 @@ const url =  BASE_URL + "messages";
 
 
 const schema =yup.object({
-    name: yup.string().required(),
+    name: yup.string().required("HAs to be minimum 3 characters"),
     message: yup.string().required(),
     subject: yup.string().required(),
   }).required();
