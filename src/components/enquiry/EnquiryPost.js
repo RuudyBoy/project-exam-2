@@ -22,6 +22,7 @@ const schema =yup.object({
     email: yup.string().required().email(),
     arrival: yup.date().required(),
     departure: yup.date().required(),
+    persons:yup.number().required(),
     information: yup.string().required(),
   }).required();
 
@@ -53,6 +54,7 @@ export default function SendEnquiry() {
                  email: data.email,
                  arrival: data.arrival,
                  departure: data.departure,
+                 persons: data.persons,
                  information: data.information
 			}});
 
@@ -106,11 +108,16 @@ export default function SendEnquiry() {
 					{errors.message && <FormError>This field is required</FormError>}
                 </div>
                 <div>
+					<label>Persons</label>
+                    <input name="persons" type={"number"}  {...register("persons", { required: true })} />
+					{errors.message && <FormError>This field is required</FormError>}
+                </div>
+                <div>
 					<label>Other neccesary information</label>
                     <input name="information" type={"text"} {...register("information", { required: true })} />
 					{errors.message && <FormError>This field is required</FormError>}
                 </div>
-            <button className="cta-form">{submitting ? "New name Created " : "Create new name"} <FaSignInAlt/></button>
+            <button className="cta-form">{submitting ? "enquiry sent " : "Send enquiry"} <FaSignInAlt/></button>
             </fieldset>
 			</form>
 		</>

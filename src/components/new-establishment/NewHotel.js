@@ -1,5 +1,5 @@
 import { BASE_URL } from "../../constants/api";
-import { useState} from "react";
+import { Component, useState} from "react";
 import React from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -10,11 +10,7 @@ import Heading from "../layout/Heading";
 import { FaSignInAlt } from "react-icons/fa";
 
 
-
-
-
 const url =  BASE_URL + "hotels?populate=*";
-
 
 const schema =yup.object({
     hotel: yup.string().required(),
@@ -25,9 +21,6 @@ const schema =yup.object({
 export default function NewHotel() {
 	const [submitting, setSubmitting] = useState(false);
 	const [loginError, setLoginError] = useState(null);
-	
-    
-
 	
 
     
@@ -40,6 +33,7 @@ export default function NewHotel() {
 
 		setSubmitting(true);
         setLoginError(null);
+
 	
 		console.log(data);
 
@@ -56,9 +50,6 @@ export default function NewHotel() {
 			console.log("response", response.data);
 			console.log(url);
 			console.log(data);
-			if (response) {
-				
-			}
 			
 
 			
@@ -104,4 +95,4 @@ export default function NewHotel() {
 			</form>
 		</>
 	);
-}
+	}

@@ -9,6 +9,7 @@ import { FaHome, FaHotel, FaInfo, FaPhone } from "react-icons/fa";
 
 
 
+
 function Nav() {
 	const [auth, setAuth] = useContext(AuthContext);
 
@@ -21,7 +22,7 @@ function Nav() {
 
 	return (
 	<Navbar className="navbar" expand="lg">
-		<Link className="navbar-brand" to="/"> <FaHotel/> Holidaze </Link>
+		<Link className="navbar-brand" to="/">  </Link>
 		 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 		 <Navbar.Collapse id="basic-navbar-nav">
 		<nav>
