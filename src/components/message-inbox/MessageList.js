@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import {  FaRegEnvelope, FaUserCircle } from "react-icons/fa";
+import {  FaAt, FaRegEnvelopeOpen, FaUserCircle } from "react-icons/fa";
 
 function MessageList() {
- const [books, setBooks] = useState([]);
+ const [messages, setMessages] = useState([]);
  const [loading, setLoading] = useState(true);
  const [error, setError] = useState(null);
  
@@ -14,7 +14,7 @@ function MessageList() {
     if (response.ok) {
      const json = await response.json();
      console.log(json);
-     setBooks(json.data);
+     setMessages(json.data);
     } else {
      setError("An error occured");
     }
@@ -37,11 +37,11 @@ function MessageList() {
 
  return (
   <>
-   {books.map(function (book) {
-    return <div className="messages" key={book.id}>
-        <p className="message-name"> < FaUserCircle/> {book.attributes.name}</p> <hr></hr>
-        <p className="message-subject">< FaRegEnvelope/> {book.attributes.subject}</p>
-        <p className="text">  {book.attributes.message}</p>
+   {messages.map(function (message) {
+    return <div className="messages" key={message.id}>
+        <p className="message-name"> < FaUserCircle/> {message.attributes.name}</p> <hr></hr>
+        <p className="message-subject"><FaAt/> {message.attributes.email}</p>
+        <p className="text"> <FaRegEnvelopeOpen/>  {message.attributes.message}</p>
        
         </div>;
    })}

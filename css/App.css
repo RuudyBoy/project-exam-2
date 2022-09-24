@@ -5,6 +5,9 @@
 .navbar {
   background: -webkit-gradient(linear, left top, right bottom, from(#181818), to(#242323));
   background: linear-gradient(to bottom right, #181818, #242323);
+  -webkit-box-shadow: 2px 5px 2px 2px black;
+          box-shadow: 2px 5px 2px 2px black;
+  margin: 10px;
 }
 
 .navbar-brand {
@@ -444,6 +447,25 @@ a {
   margin-bottom: 5px;
 }
 
+.form-design span {
+  font-family: 'Open Sans', sans-serif;
+  display: -ms-grid;
+  display: grid;
+  color: white;
+  background-color: orange;
+  padding: 1em;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.alert-success {
+  background-color: green;
+}
+
+.form-success {
+  font-size: 30px;
+}
+
 .form-title {
   margin-bottom: 20px;
 }
@@ -463,7 +485,7 @@ a {
   transition: 0.5s;
 }
 
-input {
+input, textarea {
   width: 100%;
   border-radius: 5px;
   padding: 5px;

@@ -114,7 +114,7 @@ export default function SendEnquiry() {
                 </div>
                 <div>
 					<label>Other neccesary information</label>
-                    <input name="information" type={"text"} {...register("information", { required: true })} />
+                    <textarea name="information" type={"text"} {...register("information", { required: true })} />
 					{errors.message && <FormError>This field is required</FormError>}
                 </div>
             <button className="cta-form">{submitting ? "enquiry sent " : "Send enquiry"} <FaSignInAlt/></button>

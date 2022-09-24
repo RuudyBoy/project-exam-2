@@ -8,13 +8,14 @@ import axios from "axios";
 import FormError from "../common/FormError";
 import { BASE_URL, TOKEN_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
+import { Alert } from "react-bootstrap";
 
 const url =  BASE_URL + TOKEN_PATH;
 
 
 const schema =yup.object({
-	email: yup.string().required().email(),
-    password: yup.string().matches("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})","Please enter your password"),
+	email: yup.string().required("Please enter your email").email("Please enter a valid email address"),
+    password: yup.string().required("Please enter your password").min(4, "password must contain at least 4 characters").matches("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})", "Please enter a valid password"),
   }).required();
 
 export default function LoginForm() {
@@ -63,6 +64,7 @@ export default function LoginForm() {
 	
 	return (
 		<>
+		{submitting && <Alert variant="success">Your registration was successful!</Alert>}
 			<form className="form-design"onSubmit={handleSubmit(onSubmit)}>
             {loginError && <FormError>{loginError}</FormError>}
             <fieldset disabled={submitting}>
@@ -70,12 +72,12 @@ export default function LoginForm() {
                 <div>
 				<label>Email</label>
                     <input name="email" type={"email"} {...register("email", { required: true, maxLength: 5})} />
-					{errors.email && <FormError>This field is required</FormError>}
+					{errors.email && <FormError>{errors.email.message}</FormError>}
                 </div>
 				<div>
 					<label>Password</label>
                     <input name="password"  type={"password"} {...register("password", { required: true })} />
-					{errors.password && <FormError>This field is required</FormError>}
+					{errors.password && <FormError>{errors.password.message}</FormError>}
                 </div>
             <button className="cta-form">{submitting ? "Signing in..." : "SIGN IN"}</button>
             </fieldset>

@@ -69,7 +69,7 @@ export default function NewHotel() {
 			<form className="form-design"onSubmit={handleSubmit(onSubmit)}>
             {loginError && <FormError>{loginError}</FormError>}
             <fieldset disabled={submitting}>
-			<Heading classhotel="form-title" title="Contact" />
+			<Heading classhotel="form-title" title="New hotel" />
                 <div>
 					<label>Hotel name</label>
                     <input name="hotel" type={"hotel"} {...register("hotel", { required: true, maxLength: 5})} />

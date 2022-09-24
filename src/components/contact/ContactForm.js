@@ -5,9 +5,10 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
-import FormError from "../common/FormError";
+//import FormError from "../common/FormError";
 import Heading from "../layout/Heading";
-import { FaSignInAlt } from "react-icons/fa";
+import { FaCheckCircle, FaSignInAlt } from "react-icons/fa";
+import { Alert } from "react-bootstrap";
 
 
 
@@ -17,14 +18,14 @@ const url =  BASE_URL + "messages";
 
 
 const schema =yup.object({
-    name: yup.string().required("HAs to be minimum 3 characters"),
-    message: yup.string().required(),
-    subject: yup.string().required(),
+    name: yup.string().required("Please enter your name").min(5,"The name must contain at least 5 characters"),
+	email: yup.string().required("Please enter your email").email("Please enter a valid email address"), 
+	message: yup.string().required("Please enter your message").min(10, "The message must contain at least 10 characters"),
   }).required();
 
 export default function ContactForm() {
-	const [submitting, setSubmitting] = useState(false);
-	const [loginError, setLoginError] = useState(null);
+	const [submitted, setSubmitted] = useState(false);
+	//const [loginError, setLoginError] = useState(null);
 	
     
 
@@ -38,15 +39,15 @@ export default function ContactForm() {
     
       async function onSubmit(data) {
 
-		setSubmitting(true);
-        setLoginError(null);
+		setSubmitted(true);
+        //setLoginError(null);
 	
 		console.log(data);
 
 		try {
 			const response = await axios.post(url, { "data": {
 				 name: data.name,
-                 subject: data.subject,
+                 email: data.email,
 				 message: data.message
 			}
                
@@ -54,45 +55,40 @@ export default function ContactForm() {
 			console.log("response", response.data);
 			console.log(url);
 			console.log(data);
-			if (response) {
-				
-			}
-			
+
+
 
 			
 		} catch (error) {
 			console.log("error", error);
 			console.log( error.response)
-            setLoginError(error.toString());
-		} finally {
-			setSubmitting(false);
-			console.log(false);
-		}
+            //setLoginError(error.toString());
+		} 
 	}
 
 	
 	return (
 		<>
+		{submitted && <Alert variant="success">Message sent <p className="form-success"><FaCheckCircle/></p> </Alert>}
 			<form className="form-design"onSubmit={handleSubmit(onSubmit)}>
-            {loginError && <FormError>{loginError}</FormError>}
-            <fieldset disabled={submitting}>
+            <fieldset disabled={submitted}>
 			<Heading className="form-title" title="Contact" />
                 <div>
 					<label>Full name</label>
-                    <input name="name" type={"name"} {...register("name", { required: true, maxLength: 5})} />
-					{errors.name && <FormError>This field is required</FormError>}
+                    <input name="name" {...register("name")} />
+					{errors.name && <span>{errors.name.message}</span>}
                 </div>
-                <div>
-				<label>subject</label>
-                    <input name="subject" type={"subject"}  {...register("subject", { required: true })} />
-					{errors.message && <FormError>This field is required</FormError>}
+				<div>
+				<label>Email</label>
+                    <input name="email"  {...register("email")} />
+					{errors.email && <span>{errors.email.message}</span>}
                 </div>
 				<div>
 					<label>Message</label>
-                    <input name="message" type={"message"} {...register("message", { required: true })} />
-					{errors.message && <FormError>This field is required</FormError>}
+                    <textarea name="message"  {...register("message")} />
+					{errors.message && <span>{errors.message.message}</span>}
                 </div>
-            <button className="cta-form">{submitting ? "Sending message..." : "SEND"} <FaSignInAlt/></button>
+            <button className="cta-form" type="submit"> Send message <FaSignInAlt/></button>
             </fieldset>
 			</form>
 		</>

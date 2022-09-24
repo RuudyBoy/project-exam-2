@@ -13,6 +13,8 @@ nav {
 
 .navbar {
     background: linear-gradient( to bottom right, #181818  ,#242323 );
+    box-shadow: 2px 5px 2px 2px black;
+    margin: 10px;
 }
 
 .navbar-brand {
@@ -470,6 +472,25 @@ background-repeat: no-repeat;
 
 }
 
+.form-design span {
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    color: white;
+    background-color: orange;
+    padding: 1em;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    
+}
+
+.alert-success {
+    background-color: green;
+}
+
+.form-success {
+    font-size: 30px;
+}
+
 
 .form-title {
     margin-bottom: 20px;
@@ -491,7 +512,7 @@ background-repeat: no-repeat;
 }
 
 
-input {
+input, textarea {
     width: 100%;
     border-radius: 5px;
     padding: 5px;
