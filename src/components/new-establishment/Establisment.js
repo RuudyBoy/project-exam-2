@@ -5,7 +5,7 @@ import NewHotel from "./NewHotel";
 export default function CreateEstablishment() {
 	return (
 		<>
-        <div> 
+        <div className="signin-background"> 
         <p className="dashboard-icon">< FaInbox /></p>
         <h1>Add new establishment</h1>
 		<div>

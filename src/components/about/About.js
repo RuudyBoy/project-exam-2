@@ -5,7 +5,7 @@ import bilde from "../../images/bilde.jpg"
 export default function About() {
   return (
 		<>
-    <div className='bckg' >
+    <div className="signin-background" >
     <div className='about-grid'>
     <div className='about-text'>
       <h1>About us</h1>

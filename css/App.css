@@ -59,7 +59,8 @@ nav a:hover {
 }
 
 body {
-  height: 100%;
+  background: -webkit-gradient(linear, left top, right bottom, from(#181818), to(#242323));
+  background: linear-gradient(to bottom right, #181818, #242323);
   margin: 0;
   text-align: center;
 }
@@ -511,18 +512,11 @@ label {
   font-size: large;
 }
 
-html, body, #root {
-  height: 100%;
-}
-
 #root {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
 }
 
 .footer label {
@@ -699,6 +693,11 @@ hr {
     height: max-content;
   }
   .bck {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .signin-background {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;

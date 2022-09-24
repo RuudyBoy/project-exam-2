@@ -6,7 +6,6 @@ export default function LoginPage() {
 	return (
 		<>
 		<div className="signin-background">
-		
 		<div>
 			<p className="form-logo"> < FaHotel /> </p>
 			<h1 className="logo-login">Holidaze</h1>
