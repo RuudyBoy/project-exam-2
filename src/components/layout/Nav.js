@@ -4,6 +4,7 @@ import AuthContext from "../../context/AuthContext";
 import { Link } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
 import { FaHome, FaHotel, FaInfo, FaPhone } from "react-icons/fa";
+import logo from "../../images/holi64.png"
 
 
 
@@ -22,7 +23,7 @@ function Nav() {
 
 	return (
 	<Navbar className="navbar" expand="lg">
-		<Link className="navbar-brand" to="/">  </Link>
+		<Link className="navbar-brand" to="/"> <img className="logo" src={logo} alt="Logo" />  </Link>
 		 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 		 <Navbar.Collapse id="basic-navbar-nav">
 		<nav>

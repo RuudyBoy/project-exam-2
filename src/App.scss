@@ -10,10 +10,14 @@ nav {
 }
 
 
+.logo {
+    margin: 0px !important;
+}
+
 
 .navbar {
-    background: linear-gradient( to bottom right, #181818  ,#242323 );
-    box-shadow: 2px 5px 2px 2px black;
+    background: linear-gradient( to bottom right, #2d68cc  ,#2f74e9 );
+    box-shadow: 5px 3px 5px 3px black;
     margin: 10px;
 }
 
@@ -27,7 +31,8 @@ nav {
     font-weight: bolder;
 }
 
- .navbar-toggler-icon {
+ .navbar-toggler  {
+    margin: 5px;
     color: #E4E9E4 !important;
 }
 
@@ -38,7 +43,7 @@ a {
 
 nav a {
     color: #f7f7f7;
-    margin: 10px;
+    margin-left: 10px;
 }
 
 nav a:hover {
@@ -552,9 +557,6 @@ label {
 .about-img {
     width: 60%;
     margin: 10px auto;
-    border-radius: 5px;
-    box-shadow: 5px 5px #2f74e9;
-   
 }
 
 .about-text {
@@ -734,6 +736,11 @@ hr {
 
     nav {
         display: grid;
+    }
+
+    nav a {
+        color: #f7f7f7;
+        margin: 10px;
     }
 
     //Form 

@@ -1,6 +1,5 @@
-import Heading from '../layout/Heading';
-import bilde from "../../images/bilde.jpg"
-import { FaFacebook } from 'react-icons/fa';
+
+import bergen from "../../images/bergen.png"
 
 
 export default function About() {
@@ -8,7 +7,7 @@ export default function About() {
 		<>
     <div className='about-grid'>
     <div className="about-image">
-    <img className="about-img" src={bilde} alt="Logo" />
+    <img className="about-img" src={bergen} alt="Logo" />
     </div> 
     <div className='about-text'>
       <h1>About us</h1>
