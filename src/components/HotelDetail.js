@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams, useHistory } from "react-router-dom";
 import { BASE_URL } from "../constants/api";
-import bilde from "../images/bilde.jpg";
+import bilde from "../images/detail.jpg";
 
 function HotelDetail() {
  const [hotel, setHotel] = useState(null);
@@ -57,13 +57,11 @@ function HotelDetail() {
   <div className="hotel-info"> 
   <img className="image-hotel" src={bilde}></img>
    <div className="info-grid">
- 
    <div className="hotel-text">
    <h1>{hotel.data.attributes.hotel}</h1>
    <hr></hr>
    <p>Bergen</p>
    <p>Rating:{hotel.data.attributes.rating}/10</p>
-   
    <p className="text">{hotel.data.attributes.text}</p>
    </div>
    <div className="cta-enquiry">
