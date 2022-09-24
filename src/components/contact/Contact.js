@@ -1,5 +1,3 @@
-import { FaHotel } from 'react-icons/fa';
-import Heading from '../layout/Heading';
 import ContactForm from './ContactForm';
 import logo from "../../images/holidazeform128.png"
 
