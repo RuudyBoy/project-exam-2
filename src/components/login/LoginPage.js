@@ -7,9 +7,9 @@ export default function LoginPage() {
 	return (
 		<>
 		<div className="signin-background">
-		<div>
+		
 		<img className="form-logo" src={logo} alt="Logo" />
-		</div>
+		
 		<div>
 			<Heading content="Sign in" />
 			<LoginForm />

@@ -36,7 +36,7 @@ function Nav() {
 					|  <Link to="/dashboard">Dashboard</Link>  <button className="cta-login" onClick={logout}>LOGOUT</button>
 				</>
 			) : (
-				<Link className="cta-login"  to="/login"> SIGN IN</Link>
+				<Link className="cta-nav"  to="/login"> SIGN IN</Link>
 			)}
 		</nav>
 		</Navbar.Collapse>
