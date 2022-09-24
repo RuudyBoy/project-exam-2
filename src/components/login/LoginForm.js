@@ -9,6 +9,7 @@ import FormError from "../common/FormError";
 import { BASE_URL, TOKEN_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
 import { Alert } from "react-bootstrap";
+import { FaCheckCircle } from "react-icons/fa";
 
 const url =  BASE_URL + TOKEN_PATH;
 
@@ -64,8 +65,9 @@ export default function LoginForm() {
 	
 	return (
 		<>
-		{submitting && <Alert variant="success">Your registration was successful!</Alert>}
+		
 			<form className="form-design"onSubmit={handleSubmit(onSubmit)}>
+			{submitting && <Alert variant="success"><p className="form-success"><FaCheckCircle/></p>You successfully signed in!</Alert>}
             {loginError && <FormError>{loginError}</FormError>}
             <fieldset disabled={submitting}>
 				<h1 className="form-title">Sign in</h1>

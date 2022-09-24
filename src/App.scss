@@ -484,11 +484,17 @@ background-repeat: no-repeat;
 }
 
 .alert-success {
-    background-color: green;
+   font-family: 'Open Sans', sans-serif;
+   color: white;
+   padding: 30px 40px;
+   background-color: rgb(13, 163, 13);
+   border: none ;
+
 }
 
 .form-success {
-    font-size: 30px;
+    font-size: 40px;
+    color: white;
 }
 
 
@@ -534,8 +540,8 @@ label {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
+    grid-template-columns: 1fr;
+    max-width: 1000px;
     margin: 0px auto;
 }
 
@@ -544,10 +550,23 @@ label {
 }
 
 .about-img {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
+    width: 60%;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px #2f74e9;
+   
 }
+
+.about-text {
+    text-align: left;
+    margin: 5px auto;
+    max-width: 80% ;
+}
+
+.about-text h1 {
+    text-align: center;
+}
+
 
 //Footer 
 .footer {

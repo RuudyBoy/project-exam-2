@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
-//import FormError from "../common/FormError";
+import FormError from "../common/FormError";
 import Heading from "../layout/Heading";
 import { FaCheckCircle, FaSignInAlt } from "react-icons/fa";
 import { Alert } from "react-bootstrap";
@@ -25,7 +25,7 @@ const schema =yup.object({
 
 export default function ContactForm() {
 	const [submitted, setSubmitted] = useState(false);
-	//const [loginError, setLoginError] = useState(null);
+	const [loginError, setLoginError] = useState(null);
 	
     
 
@@ -40,7 +40,7 @@ export default function ContactForm() {
       async function onSubmit(data) {
 
 		setSubmitted(true);
-        //setLoginError(null);
+        setLoginError(null);
 	
 		console.log(data);
 
@@ -62,32 +62,37 @@ export default function ContactForm() {
 		} catch (error) {
 			console.log("error", error);
 			console.log( error.response)
-            //setLoginError(error.toString());
+            setLoginError(error.toString());
 		} 
 	}
 
 	
 	return (
 		<>
-		{submitted && <Alert variant="success">Message sent <p className="form-success"><FaCheckCircle/></p> </Alert>}
+	
 			<form className="form-design"onSubmit={handleSubmit(onSubmit)}>
+			{submitted && <Alert variant="success"><p className="form-success"><FaCheckCircle/></p>Message sent!</Alert>}
+			{loginError && <FormError>{loginError}</FormError>}
             <fieldset disabled={submitted}>
 			<Heading className="form-title" title="Contact" />
                 <div>
 					<label>Full name</label>
                     <input name="name" {...register("name")} />
-					{errors.name && <span>{errors.name.message}</span>}
+					{errors.name && <FormError>{errors.name.message}</FormError>}
                 </div>
 				<div>
 				<label>Email</label>
                     <input name="email"  {...register("email")} />
-					{errors.email && <span>{errors.email.message}</span>}
+					{errors.email && <FormError>{errors.email.message}</FormError>}
                 </div>
 				<div>
 					<label>Message</label>
                     <textarea name="message"  {...register("message")} />
-					{errors.message && <span>{errors.message.message}</span>}
-                </div>
+					{errors.message && <FormError>{errors.message.message}</FormError>}
+                </div>	
+				<div>
+					
+				</div>
             <button className="cta-form" type="submit"> Send message <FaSignInAlt/></button>
             </fieldset>
 			</form>
