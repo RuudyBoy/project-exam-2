@@ -46,10 +46,11 @@ nav a {
 }
 
 nav a:hover {
+  color: white;
   padding: 0.5em;  
   border-radius: 2px;
   transition: 0.5s;
-  box-shadow: 0px 3px #031CA6;
+  box-shadow: 0px 3px white;
 }
 
 .cta-nav {
@@ -58,6 +59,18 @@ nav a:hover {
     color: #E4E9E4;
     box-shadow: 5px 5px 5px 5px #242323;
     padding: 5px 1em;
+    border-radius: 5px;
+    margin: 10px;
+    margin-bottom: 10px;
+}
+
+.cta-nav:hover {
+    padding: 5px 1em;
+    box-shadow: none;
+    transition: 1s;
+    border: none;
+    background: linear-gradient( to bottom right, #181818  ,#242323 );
+    color: #E4E9E4;
     border-radius: 5px;
     margin: 10px;
     margin-bottom: 10px;
@@ -107,7 +120,7 @@ p {
     font-family: 'Lato', sans-serif;
     max-width: 500px;
     margin: 10px auto;
-    font-size:small;
+    font-size:1em;
     color: white;
 }
 
@@ -159,6 +172,15 @@ background-repeat: no-repeat;
             background-size: cover;
             background-repeat: no-repeat;
         }
+
+        .enquiry-background {
+            background: linear-gradient( to bottom right, #181818  ,#242323 );
+            height:max-content;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
 
 
 

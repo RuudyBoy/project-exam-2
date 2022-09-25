@@ -17,12 +17,12 @@ const url =  BASE_URL + "enquiries";
 
 
 const schema =yup.object({
-    name: yup.string().required(),
-    number: yup.number().typeError("Please enter a number").required(),
-    email: yup.string().required().email(),
-    arrival: yup.date().required(),
-    departure: yup.date().required(),
-    persons:yup.number().required(),
+    name: yup.string().required("Please enter your name").min(5,"The name must contain at least 5 characters"),
+    number: yup.number().required("Please enter your number").min(7, "Your number must contain at least 7 numbers"),
+    email: yup.string().required("Please enter your email").email("Please enter a valid email address"),
+    arrival: yup.date().required("Please enter when you arrive"),
+    departure: yup.date().required("Please enter when tou will leave"),
+    persons:yup.number().required("Please registrer how many persons you will be").min(1,"You must be at least 1 person"),
     information: yup.string().required(),
   }).required();
 
@@ -85,37 +85,37 @@ export default function SendEnquiry() {
                 <div>
 					<label>Name</label>
                     <input name="name" type={"name"} {...register("name", { required: true, maxLength: 5})} />
-					{errors.name && <FormError>This field is required</FormError>}
+					{errors.name && <FormError>{errors.name.message}</FormError>}
                 </div>
                 <div>
                 <label>Number</label>
                     <input name="number" type={"number"} {...register("number", { required: true, maxLength: 5})} />
-					{errors.email && <FormError>This field is required</FormError>}
+					{errors.email && <FormError>{errors.number.message}</FormError>}
                 </div>
                 <div>
                 <label>Email</label>
                     <input name="email" type={"email"} {...register("email", { required: true, maxLength: 5})} />
-					{errors.email && <FormError>This field is required</FormError>}
+					{errors.email && <FormError>{errors.email.message}</FormError>}
                 </div>
                 <div>
 				<label>Arrival</label>
                     <input name="arrival" type={"date"}  {...register("arrival", { required: true })} />
-					{errors.message && <FormError>This field is required</FormError>}
+					{errors.message && <FormError>{errors.arrival.message}</FormError>}
                 </div>
 				<div>
 					<label>Departure</label>
                     <input name="departure" type={"date"}  {...register("departure", { required: true })} />
-					{errors.message && <FormError>This field is required</FormError>}
+					{errors.message && <FormError>{errors.departure.message}</FormError>}
                 </div>
                 <div>
 					<label>Persons</label>
                     <input name="persons" type={"number"}  {...register("persons", { required: true })} />
-					{errors.message && <FormError>This field is required</FormError>}
+					{errors.message && <FormError>{errors.persons.message}</FormError>}
                 </div>
                 <div>
 					<label>Other neccesary information</label>
                     <textarea name="information" type={"text"} {...register("information", { required: true })} />
-					{errors.message && <FormError>This field is required</FormError>}
+					{errors.message && <FormError>{errors.information.message}</FormError>}
                 </div>
             <button className="cta-form">{submitting ? "enquiry sent " : "Send enquiry"} <FaSignInAlt/></button>
             </fieldset>

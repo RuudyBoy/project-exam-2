@@ -45,7 +45,7 @@ function HotelPost() {
      {hotels.map(function (hotel) {
       const {id, attributes} = hotel;
       console.log(hotel);
-      return <HotelItem key={id}  id={id} attributes={attributes.image.data.attributes.url} />;
+      return <HotelItem key={id}  id={id} image={attributes.image.data.attributes.url} price={attributes.price}  rating={attributes.rating}  text={attributes.text} title={attributes.hotel}  />;
      })}
     </div>
    );

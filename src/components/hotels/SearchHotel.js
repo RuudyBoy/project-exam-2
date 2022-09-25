@@ -1,16 +1,9 @@
-import { FaSearch } from "react-icons/fa";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { BASE_URL } from "../../constants/api";
+  // <input className="hotel-input" type={"search"}></input>
+  
 
 
-export default function SearchHotel() {
-    return (
-        <div>
-            <div>
-            <input className="hotel-input" type={"checkbox"}></input>
-            <input className="hotel-input" type={"checkbox"}></input>
-            <input className="hotel-input" type={"checkbox"}></input>
-            </div>
-             <input className="hotel-input" type={"search"}></input>
-        </div>
-    )
-    
-}
+
+

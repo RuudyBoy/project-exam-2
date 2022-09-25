@@ -1,5 +1,5 @@
 import HotelPost from "../HotelPost";
-import SearchHotel from "./SearchHotel";
+//import Search from "./SearchHotel";
 
 export default function Hotels() {
   return (
@@ -7,7 +7,6 @@ export default function Hotels() {
 		<div className='hotel-background' >
 		<div className="holidaze">
 			 <h1>Holidaze</h1>
-			 < SearchHotel />
 		</div>	
 	 	  <div className="hotel-post"><HotelPost /></div>
 		  
