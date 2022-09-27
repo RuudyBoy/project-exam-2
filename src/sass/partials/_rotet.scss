@@ -1,5 +1,3 @@
-
-
 //navbar
 
 nav {
@@ -16,7 +14,7 @@ nav {
 
 
 .navbar {
-    background: linear-gradient( to bottom right, #2d68cc  ,#2f74e9 );
+    background: linear-gradient( to bottom right, $colour-secondary , $colour-primary );
     box-shadow: 5px 3px 5px 3px black;
 }
 
@@ -55,7 +53,7 @@ nav a:hover {
 
 .cta-nav {
     border: none;
-    background: linear-gradient( to bottom right, #181818  ,#242323 );
+    background: $colour-background;
     color: #E4E9E4;
     box-shadow: 5px 5px 5px 5px #242323;
     padding: 5px 1em;
@@ -97,42 +95,12 @@ nav a:hover {
 }
 
 
-//Body & Fonts
-
-body {
-    background: linear-gradient( to bottom right, #181818  ,#242323 );
-    margin: 0;
-    text-align: center;
-   
-}
-
-
-h1 {
-    color: #2f74e9;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Poppins', sans-serif;
-}
-
-p {
-    font-weight: 500;
-    font-family: 'Lato', sans-serif;
-    max-width: 500px;
-    margin: 10px auto;
-    font-size:1em;
-    color: white;
-}
-
- a {
-    font-family: 'Open Sans', sans-serif;
-}
 
 //Background
 
 .home-background {
 text-align: center;
-background: url(./images/bakgrunn.jpg);
+background: url(../../images/bakgrunn.jpg);
 height:100vh;
 background-position: center;
 background-size: cover;
@@ -140,7 +108,7 @@ background-repeat: no-repeat;
 }
 
 .bck {
-    background: url(./images/pexels-nextvoyage-3580098.jpg);
+    background: url(../../images/pexels-nextvoyage-3580098.jpg);
     height:100vh;
     background-position: center;
     background-size: cover;
@@ -148,7 +116,7 @@ background-repeat: no-repeat;
     }
 
     .hotel-background {
-        background: url(./images/pexels-nextvoyage-3580098.jpg);
+        background: url(../../images/pexels-nextvoyage-3580098.jpg);
         height:max-content;
         background-position: center;
         background-size: cover;
@@ -158,7 +126,7 @@ background-repeat: no-repeat;
     
     
     .bckg {
-        background: linear-gradient( to bottom right, #181818  ,#242323 );
+        background:$colour-background;;
         height: auto;
         background-position: center;
         background-size: cover;
@@ -166,7 +134,7 @@ background-repeat: no-repeat;
         }
 
         .signin-background {
-            background: linear-gradient( to bottom right, #181818  ,#242323 );
+            background:$colour-background;
             height:100vh;
             background-position: center;
             background-size: cover;
@@ -174,7 +142,7 @@ background-repeat: no-repeat;
         }
 
         .enquiry-background {
-            background: linear-gradient( to bottom right, #181818  ,#242323 );
+            background:$colour-background;
             height:max-content;
             background-position: center;
             background-size: cover;
@@ -227,7 +195,7 @@ background-repeat: no-repeat;
 
 // Search Hotel 
 
-.hotel-input {
+.search-inner{
     box-shadow: none;
     width: auto;
     margin: 10px;
@@ -256,7 +224,7 @@ background-repeat: no-repeat;
 
 
 .hotel {
-    background: linear-gradient( to bottom right, #181818  ,#242323 );
+    background:$colour-background;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 1000px;
@@ -332,6 +300,12 @@ background-repeat: no-repeat;
 
 .hotel-show h2 {
     color: #2d68cc;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.hotel-show hr {
+    margin: 10px;
 }
 
 

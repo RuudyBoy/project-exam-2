@@ -13,9 +13,9 @@ import { FaSignInAlt } from "react-icons/fa";
 const url =  BASE_URL + "hotels?populate=*";
 
 const schema =yup.object({
-    hotel: yup.string().required(),
-    rating: yup.number().required(),
-    text: yup.string().required(),
+    hotel: yup.string().required("Please enter name of the hotel").min(5,"The hotel must contain at least 5 characters"),
+    rating: yup.number().required("Please add rating of hotel").min(1,"Rating must include a number"),
+    text: yup.string().required("Please add info about the hotel").min(15,"Hotel info must include at least 15 characters"),
   }).required();
 
 export default function NewHotel() {
@@ -73,22 +73,22 @@ export default function NewHotel() {
                 <div>
 					<label>Hotel name</label>
                     <input name="hotel" type={"hotel"} {...register("hotel", { required: true, maxLength: 5})} />
-					{errors.hotel && <FormError>This field is required</FormError>}
+					{errors.hotel && <FormError>{errors.hotel.message}</FormError>}
                 </div>
                 <div>
 					<label>Hotel image</label>
                     <input name="image" type={"file"} {...register("image", { required: true, maxLength: 5})} />
-					{errors.hotel && <FormError>This field is required</FormError>}
+					{errors.hotel && <FormError>Must add a image for the hotel</FormError>}
                 </div>
                 <div>
 				<label>Hotel Rating</label>
                     <input name="rating" type={"rating"}  {...register("rating", { required: true })} />
-					{errors.message && <FormError>This field is required</FormError>}
+					{errors.message && <FormError>{errors.rating.message}</FormError>}
                 </div>
 				<div>
 					<label>Hotel info</label>
-                    <input name="message" type={"text"} {...register("text", { required: true })} />
-					{errors.message && <FormError>This field is required</FormError>}
+                    <input name="text" type={"text"} {...register("text", { required: true })} />
+					{errors.message && <FormError>{errors.text.message}</FormError>}
                 </div>
             <button className="cta-form">{submitting ? "New hotel Created " : "Create new Hotel"} <FaSignInAlt/></button>
             </fieldset>

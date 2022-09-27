@@ -1,0 +1,30 @@
+//Body & Fonts
+
+body {
+    background:$colour-background;
+    margin: 0;
+    text-align: center;
+   
+}
+
+
+h1 {
+    color: #2f74e9;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+    max-width: 500px;
+    margin: 10px auto;
+    font-size:1em;
+    color: white;
+}
+
+ a {
+    font-family: 'Open Sans', sans-serif;
+}

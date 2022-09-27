@@ -27,7 +27,7 @@ function Nav() {
 		 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 		 <Navbar.Collapse id="basic-navbar-nav">
 		<nav>
-			<Link to="/">  Home</Link>
+			<Link to="/"> Home</Link>
             <Link to="/hotels">  Hotels</Link>
             <Link to="/contact"> Contact</Link>
             <Link to="/about">  About </Link>

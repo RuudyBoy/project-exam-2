@@ -6,10 +6,10 @@ function HotelItem({id, image, price , text, rating, title }) {
  return (
    <div className="hotel-show"> 
    <img className="hotel-img" src={image} alt="Logo" />
+   <h2>{title}</h2>
+   <hr></hr>
    <div className="hotel-inner">
     <div className="hotel-yiha"> 
-      <h2>{title}</h2>
-      <hr></hr>
       <div className="hotel-location">
       <p className="map-icon"><FaMapMarkerAlt/></p>
       <p> Bergen</p>

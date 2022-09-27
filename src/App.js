@@ -1,10 +1,10 @@
-import "./App.scss";
+
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from "./components/home/Home";
 import Nav from './components/layout/Nav';
 import DashboardPage from './components/dashboard/DashboardPage';
-import "./App.scss"
+import "./sass/style.scss"
 import { AuthProvider } from './context/AuthContext';
 import HotelDetail from "./components/HotelDetail";
 import LoginPage from "./components/login/LoginPage";
@@ -16,7 +16,7 @@ import EnquiryInbox from "./components/enquiry-inbox/EnquiryInbox";
 import CreateEstablishment from "./components/new-establishment/Establisment";
 import Enquiry from "./components/enquiry/enquiry";
 import Hotels from "./components/hotels/Hotels";
-import HotelPost from "./components/HotelPost";
+
 
 
 
