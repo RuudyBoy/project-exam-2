@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import {  FaAt, FaRegEnvelopeOpen, FaUserCircle } from "react-icons/fa";
+import { BASE_URL } from "../../constants/api";
+
+const url = BASE_URL + "messages"
 
 function MessageList() {
  const [messages, setMessages] = useState([]);
@@ -7,9 +10,9 @@ function MessageList() {
  const [error, setError] = useState(null);
  
  useEffect(function () {
-  async function fetchData() {
+  async function fetchMessages() {
    try {
-    const response = await fetch("https://ruud-exam.herokuapp.com/api/messages");
+    const response = await fetch(url);
 
     if (response.ok) {
      const json = await response.json();
@@ -24,7 +27,7 @@ function MessageList() {
     setLoading(false);
    }
   }
-  fetchData();
+  fetchMessages();
  }, []);
 
  if (loading) {
@@ -38,10 +41,10 @@ function MessageList() {
  return (
   <>
    {messages.map(function (message) {
-    return <div className="messages" key={message.id}>
+    return <div className="message-card" key={message.id}>
         <p className="message-name"> < FaUserCircle/> {message.attributes.name}</p> <hr></hr>
         <p className="message-subject"><FaAt/> {message.attributes.email}</p>
-        <p className="text"> <FaRegEnvelopeOpen/>  {message.attributes.message}</p>
+        <p className="message-text"> <FaRegEnvelopeOpen/>  {message.attributes.message}</p>
        
         </div>;
    })}

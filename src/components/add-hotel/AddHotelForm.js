@@ -1,5 +1,5 @@
 import { BASE_URL } from "../../constants/api";
-import { Component, useState} from "react";
+import { useState} from "react";
 import React from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -18,23 +18,19 @@ const schema =yup.object({
     text: yup.string().required("Please add info about the hotel").min(15,"Hotel info must include at least 15 characters"),
   }).required();
 
-export default function NewHotel() {
+export default function AddHotels() {
 	const [submitting, setSubmitting] = useState(false);
 	const [loginError, setLoginError] = useState(null);
-	
-
     
 	const { register, handleSubmit, formState:{ errors } } = useForm({
         resolver: yupResolver(schema)
       });
 
-    
       async function onSubmit(data) {
 
 		setSubmitting(true);
         setLoginError(null);
 
-	
 		console.log(data);
 
 		try {
@@ -50,8 +46,6 @@ export default function NewHotel() {
 			console.log("response", response.data);
 			console.log(url);
 			console.log(data);
-			
-
 			
 		} catch (error) {
 			console.log("error", error);
@@ -90,7 +84,7 @@ export default function NewHotel() {
                     <input name="text" type={"text"} {...register("text", { required: true })} />
 					{errors.message && <FormError>{errors.text.message}</FormError>}
                 </div>
-            <button className="cta-form">{submitting ? "New hotel Created " : "Create new Hotel"} <FaSignInAlt/></button>
+            <button className="cta-form">{submitting ? "New hotel added " : "Add new Hotel"} <FaSignInAlt/></button>
             </fieldset>
 			</form>
 		</>

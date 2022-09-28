@@ -1,0 +1,32 @@
+//Home page
+
+.home-container {
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+
+.home-container h1 {
+    font-size: 60px;
+    text-shadow: 2px 1px $colour-box-shadow;
+}
+
+.home-container h2 {
+    color: $colour-alternative-title;
+    margin-bottom: 20px;
+    text-shadow: 2px 1px $colour-box-shadow;
+}
+
+//Smaller screens
+
+@media (max-width: 986px) {
+    
+    .home-container h1 {
+        font-size: 30px;
+    }
+    
+    .home-container h2 {
+        font-size: 15px;
+        margin: 20px auto;
+    }
+}

@@ -10,12 +10,7 @@ import Heading from "../layout/Heading";
 import { FaCheckCircle, FaSignInAlt } from "react-icons/fa";
 import { Alert } from "react-bootstrap";
 
-
-
-
-
 const url =  BASE_URL + "messages";
-
 
 const schema =yup.object({
     name: yup.string().required("Please enter your name").min(5,"The name must contain at least 5 characters"),
@@ -26,32 +21,23 @@ const schema =yup.object({
 export default function ContactForm() {
 	const [submitted, setSubmitted] = useState(false);
 	const [loginError, setLoginError] = useState(null);
-	
-    
 
-	
-
-    
 	const { register, handleSubmit, formState:{ errors } } = useForm({
         resolver: yupResolver(schema)
       });
 
-    
       async function onSubmit(data) {
 
 		setSubmitted(true);
         setLoginError(null);
 	
-		console.log(data);
-
 		try {
 			const response = await axios.post(url, { "data": {
 				 name: data.name,
                  email: data.email,
 				 message: data.message
-			}
-               
-            });
+			}});
+			
 			console.log("response", response.data);
 			console.log(url);
 			console.log(data);

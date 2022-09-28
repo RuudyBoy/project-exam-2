@@ -8,12 +8,12 @@ import logo from "../../images/holilogo128.png"
 export default function Home() {
   return (
     <>
-    <div className='home-background'>
-    <div className='home-page'>
+    <div className="home-background">
+    <div className="home-container">
     <img className="logo" src={logo} alt="Logo" />
       <Heading title="Welcome to Holidaze!" />
       <h2>Find a hotel in the beatiful city of Bergen.</h2>
-      <Link className='home-cta' to="/hotels"><FaHotel /> BOOK HOTEL</Link>
+      <Link className="home-cta" to="/hotels"><FaHotel /> BOOK HOTEL</Link>
     </div> 
     </div>
     </>

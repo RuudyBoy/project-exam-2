@@ -5,7 +5,7 @@ import bergen from "../../images/bergen.png"
 export default function About() {
   return (
 		<>
-    <div className='about-grid'>
+    <div className='about-container'>
     <div className="about-image">
     <img className="about-img" src={bergen} alt="Logo" />
     </div> 

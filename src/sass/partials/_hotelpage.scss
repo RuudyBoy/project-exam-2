@@ -1,0 +1,239 @@
+
+//Hotel Container
+
+.hotel-container {
+    background:$colour-background;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1000px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 5px;
+}
+
+//Hotel card
+
+.hotel-card {
+    background-color: $colour-card-background;
+    margin: 15px;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow:5px 5px 5px 5px $colour-box-shadow ;
+    padding-bottom: 10px;
+ }
+ 
+ .hotel-card:hover {
+     box-shadow:5px 5px 5px 5px $colour-primary;
+     transition: 0.5s;
+ }
+ 
+ .hotel-card h2 {
+     color: $colour-secondary;
+     text-align: left;
+     margin-left: 5px;
+ }
+ 
+ .hotel-card hr {
+     margin: 10px;
+ }
+
+
+//Hotel image
+
+.hotel-img {
+    max-width: 100%;
+    margin-top: 0px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+//Hotel-inner
+.hotel-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hotel-information {
+    text-align: left;
+    margin-left: 5px;
+}
+
+//Hotel price
+
+.hotel-price-info {
+    margin-top: auto;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+.hotel-price {
+    color: $colour-box-shadow;
+    font-size: large;
+    font-weight: 700;
+}
+
+//Hotel text
+
+.hotel-text {
+    color: $colour-alternative-text !important;
+}
+.hotel-inner p {
+   color: black;
+}
+
+.price-info {
+    color: $colour-alternative-text !important;
+}
+
+//Hotel review
+
+.hotel-review {
+    margin-right: 2px;
+    font-weight: bold;
+}
+
+.review {
+    display: inline-flex;
+}
+
+.review-text{
+    font-weight: 600;
+    color: $colour-secondary !important;
+    margin-right: 2px;
+}
+
+//Hotel location 
+
+.hotel-location {
+    display: flex;
+}
+
+.hotel-location p {
+    margin: 0px;
+}
+
+.map-icon {
+    color: red !important;
+}
+
+
+//Hotel details page
+
+
+//details container
+
+.hoteldetails-container {
+    max-width: 1000px;
+    margin: 10px auto;
+    background: $colour-background;
+    border-radius: 5px;
+}
+
+//details image
+
+.hoteldetails-image {
+    border-radius: 5px;
+    width: 100%;
+    height: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+
+//details text
+
+.hoteldetails-text {
+    color: $colour-text !important;
+    margin: 10px auto;
+}
+
+.hoteldetails-text h1 {
+    color: $colour-alternative-title !important;
+}
+
+.hoteldetails-info {
+    text-align: left;
+    margin-left: 10px;
+}
+
+
+.detail-inner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+} 
+
+//details send enquiry
+
+.details-sendenquiry {
+    width: 300px;
+    display: inline-block;
+    margin:auto;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px $colour-box-shadow;
+    padding: 1em;
+}
+
+.details-sendenquiry p {
+    font-weight: 700;
+    font-size: large;
+    color: #181818;
+    margin-bottom: 20px;
+}
+
+
+// Search Hotel 
+
+.search-inner{
+    box-shadow: none;
+    width: auto;
+    margin: 10px;
+}
+
+.holidaze {
+    border-radius: 5px;
+    background-color: #242323;
+    max-width:1000px;
+    margin: 10px auto;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.page-item a {
+   background-color: #242323;
+   color: white;
+   border-radius: 5px;
+   border: 2px  solid #2d68cc;
+}
+
+
+
+//Smaller screens
+
+@media (max-width: 986px) {
+
+    .hotel-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    //Hotel detail
+
+    .detail-inner-grid {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+@media (max-width: 500px) {
+
+    .hotel {
+        grid-template-columns: 1fr;
+    }
+
+    .hotel-show {
+        width: 300px;
+        margin: 10px auto;
+    }
+
+}

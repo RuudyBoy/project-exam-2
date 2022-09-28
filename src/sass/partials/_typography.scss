@@ -1,24 +1,18 @@
-//Body & Fonts
+//Fonts
 
-body {
-    background:$colour-background;
-    margin: 0;
-    text-align: center;
-   
-}
 
 
 h1 {
-    color: #2f74e9;
+    color: $colour-primary;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Poppins', sans-serif;
+    font-family: $font-primary;
 }
 
 p {
     font-weight: 500;
-    font-family: 'Lato', sans-serif;
+    font-family: $font-text;
     max-width: 500px;
     margin: 10px auto;
     font-size:1em;
@@ -26,5 +20,6 @@ p {
 }
 
  a {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font-secondary;
+    text-decoration: none;
 }

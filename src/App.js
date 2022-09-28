@@ -6,16 +6,16 @@ import Nav from './components/layout/Nav';
 import DashboardPage from './components/dashboard/DashboardPage';
 import "./sass/style.scss"
 import { AuthProvider } from './context/AuthContext';
-import HotelDetail from "./components/HotelDetail";
 import LoginPage from "./components/login/LoginPage";
 import Contact from "./components/contact/Contact";
 import About from "./components/about/About";
 import Footer from "./components/layout/footer";
 import MessageInbox from "./components/message-inbox/MessageInbox";
 import EnquiryInbox from "./components/enquiry-inbox/EnquiryInbox";
-import CreateEstablishment from "./components/new-establishment/Establisment";
 import Enquiry from "./components/enquiry/enquiry";
 import Hotels from "./components/hotels/Hotels";
+import HotelDetail from './components/hotels/HotelDetail';
+import AddHotel from './components/add-hotel/AddHotel';
 
 
 
@@ -45,8 +45,8 @@ function App() {
           <Route path="/login">
 							<LoginPage />
 						</Route>
-            <Route path="/new-establishment">
-						< CreateEstablishment/>
+            <Route path="/add-hotel">
+						< AddHotel/>
 					</Route>
             <Route path="/dashboard" exact>
 						<DashboardPage />

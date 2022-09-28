@@ -1,0 +1,51 @@
+//Background
+
+
+// prøve nesting her
+.home-background {
+    text-align: center;
+    background: url(../../images/bakgrunn.jpg);
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    } 
+    
+    .signin-background {
+                background:$colour-background;
+                height:100vh;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+
+
+    
+    .hotel-background {
+         background: url(../../images/pexels-nextvoyage-3580098.jpg);
+          height:max-content;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        
+            .enquiry-background {
+                background:$colour-background;
+                height:max-content;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+    
+    
+    //Smaller screens
+
+     @media (max-width: 986px) {
+
+        .signin-background {
+            height: max-content;
+        }
+    }
+           
+    

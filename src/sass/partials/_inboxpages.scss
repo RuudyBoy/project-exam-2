@@ -1,0 +1,81 @@
+//Message-inbox
+
+.inbox-title {
+    display: block;
+}
+
+.inbox-container {
+    border-radius: 5px;
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+.inbox-container h1 {
+    color: $colour-alternative-title;
+}
+
+.inbox-icon {
+    font-size: 30px;
+    color: $colour-alternative-title;
+}
+
+
+.message-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.message-card {
+    color: $colour-primary;
+    background-color: white;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px $colour-box-shadow;
+    padding: 5px 1em;
+    text-align: left;
+}
+
+.message-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: $colour-primary;
+    text-align: left;
+}
+
+.message-subject {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: black;
+    text-align: left;
+}
+
+.message-text {
+    color: $colour-alternative-text;
+}
+
+hr {
+    margin: 1px;
+    padding: 0px;
+}
+
+
+//newestablishment container
+
+.addhotel-container {
+    margin-bottom: 10px;
+}
+
+.addhotel-title {
+    color: $colour-alternative-title;
+}
+
+//Smaller screens
+
+@media (max-width: 986px) {
+
+    .message-container {
+       display: grid;
+       grid-template-columns: 1fr;
+       max-width: 1000px;
+       margin: auto;
+   }
+}

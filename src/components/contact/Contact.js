@@ -9,7 +9,7 @@ export default function Contact() {
     <div>
     <img className="logo" src={logo} alt="Logo" />
 		</div>
-    <div className='contact-page'>
+    <div>
       <ContactForm />
     </div>
     </div>
