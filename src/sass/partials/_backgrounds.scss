@@ -1,7 +1,5 @@
 //Background
 
-
-// prøve nesting her
 .home-background {
     text-align: center;
     background: url(../../images/bakgrunn.jpg);
@@ -12,16 +10,14 @@
     } 
     
     .standard-background {
-                background:$colour-background;
-                height:100vh;
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
+         background:$colour-background;
+         height:100vh;
+         background-position: center;
+         background-size: cover;
+         background-repeat: no-repeat;
             }
 
 
-
-    
     .hotel-background {
          background: url(../../images/pexels-nextvoyage-3580098.jpg);
           height:max-content;
@@ -30,12 +26,12 @@
           background-repeat: no-repeat;
         }
         
-            .enquiry-background {
-                background:$colour-background;
-                height:max-content;
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
+        .enquiry-background {
+             background:$colour-background;
+             height:max-content;
+             background-position: center;
+             background-size: cover;
+             background-repeat: no-repeat;
             }
     
     
