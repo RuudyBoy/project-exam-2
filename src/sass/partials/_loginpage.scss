@@ -7,27 +7,14 @@
     margin-top: 150px;
 }
 
-.form-logo {
-    font-size: 40px;
-    color: #2f74e9;
-}
-
-.logo-login {
-    font-family:auto;
-}
 
 //Smaller screens
 
 @media (max-width: 986px) {
 
-    //Login page
-    
     .login-container {
         margin: 0px auto;
         grid-template-columns: 1fr;
     }
 
-    .logo-login {
-        font-size: 30px;
-    }
 }

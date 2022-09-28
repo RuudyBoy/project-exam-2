@@ -79,7 +79,7 @@ export default function ContactForm() {
 				<div>
 					
 				</div>
-            <button className="cta-form" type="submit"> Send message <FaSignInAlt/></button>
+            <button className="cta-button" type="submit"> Send message <FaSignInAlt/></button>
             </fieldset>
 			</form>
 		</>

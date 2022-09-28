@@ -13,7 +13,6 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const url =  BASE_URL + TOKEN_PATH;
 
-
 const schema =yup.object({
 	email: yup.string().required("Please enter your email").email("Please enter a valid email address"),
     password: yup.string().required("Please enter your password").min(4, "password must contain at least 4 characters").matches("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})", "Please enter a valid password"),
@@ -25,7 +24,6 @@ export default function LoginForm() {
 
 	const history = useHistory();
 
-    
 	const { register, handleSubmit, formState:{ errors } } = useForm({
         resolver: yupResolver(schema)
       });
@@ -45,23 +43,16 @@ export default function LoginForm() {
 				identifier: data.email,
 				password: data.password
 			});
-			console.log("response", response.data);
-			console.log(data.email);
-			console.log(url);
-			console.log(data);
+		
 			setAuth(response.data);
 			history.push("/dashboard");
 			
 		} catch (error) {
-			console.log("error", error);
-			console.log( error.response)
             setLoginError(error.toString());
 		} finally {
 			setSubmitting(false);
-			console.log(false);
 		}
 	}
-
 	
 	return (
 		<>
@@ -81,7 +72,7 @@ export default function LoginForm() {
                     <input name="password"  type={"password"} {...register("password", { required: true })} />
 					{errors.password && <FormError>{errors.password.message}</FormError>}
                 </div>
-            <button className="cta-form">{submitting ? "Signing in..." : "SIGN IN"}</button>
+            <button className="cta-button">{submitting ? "Signing in..." : "SIGN IN"}</button>
             </fieldset>
 			</form>
 		</>

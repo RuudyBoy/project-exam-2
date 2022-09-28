@@ -84,7 +84,7 @@ export default function AddHotels() {
                     <input name="text" type={"text"} {...register("text", { required: true })} />
 					{errors.message && <FormError>{errors.text.message}</FormError>}
                 </div>
-            <button className="cta-form">{submitting ? "New hotel added " : "Add new Hotel"} <FaSignInAlt/></button>
+            <button className="cta-button">{submitting ? "New hotel added " : "Add new Hotel"} <FaSignInAlt/></button>
             </fieldset>
 			</form>
 		</>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function DashboardPage() {
 	return (
 		<>	
-		<div className="signin-background">
+		<div className="standard-background">
 		<h1 className="dashboard-title">Dashboard</h1>
 		<h2 className="dashboard-title">Welcome Boss!</h2>
 		<div className="dashboard-container">

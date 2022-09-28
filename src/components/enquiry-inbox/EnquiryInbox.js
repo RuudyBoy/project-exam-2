@@ -7,7 +7,7 @@ import EnquiryList from "./EnquiryList";
 export default function EnquiryInbox() {
 	return (
 		<>
-		<div className="signin-background"> 
+		<div className="standard-background"> 
         <div className="inbox-container"> 
         <p className="inbox-icon">< FaInbox /></p>
         <h1>Enquiry inbox</h1>

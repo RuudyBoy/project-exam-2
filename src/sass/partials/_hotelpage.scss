@@ -168,7 +168,7 @@
     display: inline-block;
     margin:auto;
     border-radius: 5px;
-    background-color: white;
+    background-color: $colour-card-background;
     box-shadow: 5px 5px 5px 5px $colour-box-shadow;
     padding: 1em;
 }
@@ -180,34 +180,9 @@
     margin-bottom: 20px;
 }
 
-
-// Search Hotel 
-
-.search-inner{
-    box-shadow: none;
-    width: auto;
+.sendenquiry-inner {
     margin: 10px;
 }
-
-.holidaze {
-    border-radius: 5px;
-    background-color: #242323;
-    max-width:1000px;
-    margin: 10px auto;
-}
-
-.pagination {
-    justify-content: center;
-}
-
-.page-item a {
-   background-color: #242323;
-   color: white;
-   border-radius: 5px;
-   border: 2px  solid #2d68cc;
-}
-
-
 
 //Smaller screens
 

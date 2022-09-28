@@ -45,7 +45,6 @@ function MessageList() {
         <p className="message-name"> < FaUserCircle/> {message.attributes.name}</p> <hr></hr>
         <p className="message-subject"><FaAt/> {message.attributes.email}</p>
         <p className="message-text"> <FaRegEnvelopeOpen/>  {message.attributes.message}</p>
-       
         </div>;
    })}
   </>

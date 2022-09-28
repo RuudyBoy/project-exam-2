@@ -23,7 +23,7 @@ function HotelItem({id, image, price , text, rating, title }) {
     <div className="hotel-price-info">
       <p className="hotel-price">{price} kr</p>
       <p className="hotel-text"> per night</p>
-    <Link to={`detail/${id}`}><p className="cta-hotel"> MORE INFO</p></Link>
+    <Link to={`detail/${id}`}><p className="cta-button"> MORE INFO</p></Link>
    </div>
    </div>
    </div>

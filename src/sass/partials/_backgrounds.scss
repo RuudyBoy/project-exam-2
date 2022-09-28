@@ -11,7 +11,7 @@
     background-repeat: no-repeat;
     } 
     
-    .signin-background {
+    .standard-background {
                 background:$colour-background;
                 height:100vh;
                 background-position: center;
@@ -43,7 +43,7 @@
 
      @media (max-width: 986px) {
 
-        .signin-background {
+        .standard-background {
             height: max-content;
         }
     }

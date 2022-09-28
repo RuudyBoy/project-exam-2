@@ -66,7 +66,7 @@ function HotelDetail() {
    <div className="details-sendenquiry">
    <p> Thon hotels</p>
    <p>{hotel.data.attributes.price} kr per night</p>
-   <Link  to="/enquiry" className="cta-sendequiry"> Send enquiry</Link>
+   <Link  to="/enquiry" className="cta-button"> Send enquiry</Link>
    </div>
    </div>
   </div>

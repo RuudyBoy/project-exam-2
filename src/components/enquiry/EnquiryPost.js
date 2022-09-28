@@ -27,26 +27,19 @@ const schema =yup.object({
   }).required();
 
 export default function SendEnquiry() {
+
 	const [submitted, setSubmitted] = useState(false);
 	const [loginError, setLoginError] = useState(null);
 	
-    
-
-	
-
-    
 	const { register, handleSubmit, formState:{ errors } } = useForm({
         resolver: yupResolver(schema)
       });
 
-    
       async function onSubmit(data) {
 
 		setSubmitted(true);
         setLoginError(null);
 	
-		console.log(data);
-
 		try {
 			const response = await axios.post(url, { "data": {
                  name: data.name,
@@ -56,22 +49,11 @@ export default function SendEnquiry() {
                  persons: data.persons,
                  information: data.information
 			}});
-
-			console.log("response", response.data);
-			console.log(url);
-			console.log(data);
-			
-			
-
-			
 		} catch (error) {
-			console.log("error", error);
-			console.log( error.response)
             setLoginError(error.toString());
 		} 
 	}
 
-	
 	return (
 		<>
             <Heading classname="form-title" title="Send enquiry" />
@@ -110,7 +92,7 @@ export default function SendEnquiry() {
                     <textarea name="information" type={"text"} {...register("information", { required: true })} />
 					{errors.message && <FormError>{errors.information.message}</FormError>}
                 </div>
-                <button className="cta-form" type="submit"> Send enquiry <FaSignInAlt/></button>
+                <button className="cta-button" type="submit"> Send enquiry <FaSignInAlt/></button>
             </fieldset>
 			</form>
 		</>

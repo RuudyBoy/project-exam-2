@@ -5,7 +5,7 @@ export default function Enquiry() {
   return (
     <>
     <div className="enquiry-background">
-      <div className="newhotel-inner">
+      <div className="sendenquiry-inner">
         <div>
           < SendEnquiry />
         </div>

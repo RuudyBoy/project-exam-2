@@ -2,111 +2,11 @@
 
 .back-link {
     text-decoration: underline;
-    color: white;
+    color: $colour-text;
     margin-bottom: 10px;
 }
 
 
-
-//buttons
-.cta-login {
-    border: none;
-    background-color:#2f74e9 ;
-    color: white;
-    padding: 5px 1em;
-    border-radius: 5px;
-    margin: 10px;
-    margin-bottom: 10px;
-}
-
-.cta-login:hover {
-    text-decoration: none;
-    background: linear-gradient(#2d68cc, #031CA6);
-    color: white;
-    transition: 0.5s;
-}
-
-//Homepagebutton
-.home-cta {
-    background-color: #2f74e9;
-    border-radius: 5px;
-    color: white;
-    padding: 16px 21px ;
-    }
-
-.home-cta:hover {
-    color: white;
-    background: linear-gradient(#2d68cc, #031CA6);
-    transition: 1s;
-    padding: 15px 50px;
-}
-
-//hotelbuttons
-
-.cta-send {
-    display: inline;
-    background-color: #2d68cc;
-    color: #f7f7f7;
-    border: 2px solid #2f74e9;
-    padding: 5px 1em;
-    margin-bottom: 0px;
-    margin: 5px;
-}
-
-.cta-send:hover {
-    padding: 5px 1em;
-    background: linear-gradient(#2d68cc, #031CA6);
-    color: #f7f7f7;
-    transition: 0.5s;
-}
-
-.cta-hotel {
-    color: white !important;
-    border-radius: 5px;
-    background-color: #2f74e9;
-    padding: 5px 1em;
-    margin: 5px;
-}
-
-.cta-hotel:hover {
-    padding: 5px 1em;
-    background: linear-gradient(#2d68cc, #031CA6);
-    color: #f7f7f7;
-    transition: 0.5s;
-}
-
-
-// enquirybuttons
-
-
-.cta-sendequiry {
-    border-radius: 5px;
-    padding: 5px 1em;
-    background-color: #2f74e9;
-    color: white;
-    margin-bottom: 0px;
-}
-
-.cta-sendequiry:hover {
-    padding: 5px 1em;
-    background: linear-gradient(#2d68cc, #031CA6);
-    color: #f7f7f7;
-    transition: 0.5s;
-}
-
-//formbuttons
-.cta-form {
-    border-radius: 5px;
-    background-color: #2f74e9;
-    border: none;
-    color: #f7f7f7;
-    padding: 5px 1em;
-}
-
-.cta-form:hover {
-    background: linear-gradient(#2d68cc, #031CA6);
-    transition: 0.5s;
-}
 
 
 //Contact form 
@@ -134,7 +34,7 @@
     padding: 1em;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: $colour-text;
     margin-bottom: 5px;
 
 }
@@ -152,7 +52,7 @@
 
 .alert-success {
    font-family: 'Open Sans', sans-serif;
-   color: white;
+   color: $colour-text;
    padding: 30px 40px;
    background-color: rgb(13, 163, 13);
    border: none ;
