@@ -6,20 +6,19 @@
     margin-bottom: 10px;
 }
 
-
 //Searchbar
-
 
 .dropdown-inner {
     width: 40%;
     margin: 10px auto;
 }
 .searchbar {
+    outline: none;
     border-radius: 0px;
     width: 100%;
     margin: auto;
     box-shadow: none;
-    border: 2px solid $colour-background;
+    border-bottom: 1px solid  $colour-background;
 }
 
 .dropdown {
@@ -30,7 +29,7 @@
     display: inline-flex;
     width: 100%;
     margin: 0px;
-    border-bottom: 1px solid $colour-secondary;
+    //border-bottom: 1px solid $colour-secondary;
 }
 
 .dropdown-design:hover {
@@ -130,6 +129,12 @@ label {
 }
 
 
+//Enquiry page
+
+.sendenquiry-inner h1 {
+    color: $colour-alternative-title !important;
+}
+
 
 //Smaller screens
 
@@ -150,6 +155,11 @@ label {
 }
 
 @media (max-width: 500px) {
+
+    .dropdown-inner {
+        width: 70%;
+        margin: 10px auto;
+    }
 
     .form-design {
         margin-top: 20px;

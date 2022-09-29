@@ -2,39 +2,15 @@
 .footer {
     margin-top:auto;
     color: white;
-    background: linear-gradient( to bottom right, #181818  ,#242323 );
-}
-
-.footer-title {
-    font-weight: 600;
-    font-size: large;
+    background: $colour-background;
 }
 
 
 .footer label {
     display: grid;
-    color: white;
+    color: $colour-text;
 }
 
-.subscribe-input {
-    width: 50%;
-    margin: 10px auto;
-}
-
-.subscribe button {
-    color: white;
-    background-color: black;
-    border: none;
-    padding: 6px 6px 9.6px;
-}
-
-.copyright {
-    padding:1em;
-    margin-bottom: 0px;
-    color: white;
-    background-color: black;
-    text-align: center;
-}
 
 .grid-footer {
     display: grid;
@@ -48,7 +24,7 @@
 }
 .some:hover {
     cursor: pointer;
-    color: #031CA6;
+    color: $colour-secondary;
     margin: 10px;
     font-size: 30px;
 }
@@ -61,13 +37,6 @@
         grid-template-columns: 1fr;
     }
 
-    .footer h3 {
-        font-size: 15px;
-    }
-
-    .footer p {
-        font-size: 10px;
-    }
 
     .footer input {
         display: none;
@@ -78,7 +47,7 @@
     }
 
     .some {
-        font-size: 15px;
+        font-size: 20px;
     }
 
 }

@@ -56,7 +56,7 @@ export default function SendEnquiry() {
 
 	return (
 		<>
-            <Heading classname="form-title" title="Send enquiry" />
+            <Heading classname="enquiry-title" title="Send enquiry" />
 			<form className="form-design"onSubmit={handleSubmit(onSubmit)}>
             {submitted && <Alert variant="success"><p className="form-success"><FaCheckCircle/></p>Enquiry sent!</Alert>}
             {loginError && <FormError>{loginError}</FormError>}

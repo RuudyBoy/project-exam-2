@@ -201,12 +201,17 @@
     .detail-inner-grid {
         grid-template-columns: 1fr;
     }
+
+    .details-sendenquiry {
+        margin: 10px auto;
+    }
+
     
 }
 
 @media (max-width: 500px) {
 
-    .hotel {
+    .hotel-container {
         grid-template-columns: 1fr;
     }
 

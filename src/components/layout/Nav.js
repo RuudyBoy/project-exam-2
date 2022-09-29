@@ -34,7 +34,7 @@ function Nav() {
 			
 			{auth ? (
 				<>
-					|  <Link to="/dashboard">Dashboard</Link>  <button className="cta-login" onClick={logout}>LOGOUT</button>
+					|  <Link to="/dashboard">Dashboard</Link>  <button className="cta-nav" onClick={logout}>LOGOUT</button>
 				</>
 			) : (
 				<Link className="cta-nav"  to="/login"> SIGN IN</Link>
