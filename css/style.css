@@ -63,7 +63,8 @@ body {
   outline: none;
   border-radius: 0px;
   width: 100%;
-  margin: 10px auto;
+  margin: auto;
+  margin-top: 10px;
   -webkit-box-shadow: none;
           box-shadow: none;
   border-bottom: 1px solid #153373;
