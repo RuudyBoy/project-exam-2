@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import { BASE_URL } from '../../constants/api';
 
 const url =  BASE_URL + "hotels?populate=*";
@@ -52,7 +53,9 @@ function SearchHotel() {
         }
     }).map((hotel) => (
     <div className="dropdown" key={hotel.id}>
-      <p>{hotel.attributes.hotel}</p>
+        <Link to={`detail/${hotel.id}`}>
+            <p>{hotel.attributes.hotel}</p>
+        </Link>
     </div>
   ))}
      </>
