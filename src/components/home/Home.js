@@ -2,6 +2,7 @@ import Heading from '../layout/Heading';
 import { FaHotel } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from "../../images/holilogo128.png"
+import SearchHotel from './SearchHotel';
 
 
 
@@ -15,6 +16,9 @@ export default function Home() {
       <h2>Find a hotel in the beatiful city of Bergen.</h2>
       <Link className="home-cta" to="/hotels"><FaHotel /> BOOK HOTEL</Link>
     </div> 
+    <div>
+      <SearchHotel/>
+    </div>
     </div>
     </>
   );

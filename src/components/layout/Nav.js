@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
 import { FaHome, FaHotel, FaInfo, FaPhone } from "react-icons/fa";
 import logo from "../../images/holidazehvittekst64.png"
+import SearchHotel from "../home/SearchHotel";
 
 
 

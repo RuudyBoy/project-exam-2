@@ -54,6 +54,10 @@ body {
   margin-bottom: 10px;
 }
 
+.searchbar {
+  width: auto;
+}
+
 .input-design {
   display: table;
 }
