@@ -60,12 +60,13 @@ body {
 }
 
 .searchbar {
+  outline: none;
   border-radius: 0px;
   width: 100%;
-  margin: auto;
+  margin: 10px auto;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 2px solid #153373;
+  border-bottom: 1px solid #153373;
 }
 
 .dropdown {
@@ -78,7 +79,6 @@ body {
   display: inline-flex;
   width: 100%;
   margin: 0px;
-  border-bottom: 1px solid #2d68cc;
 }
 
 .dropdown-design:hover {
@@ -172,6 +172,10 @@ label {
   font-weight: 300;
 }
 
+.sendenquiry-inner h1 {
+  color: white !important;
+}
+
 @media (max-width: 986px) {
   form {
     margin-bottom: 20px;
@@ -184,6 +188,10 @@ label {
 }
 
 @media (max-width: 500px) {
+  .dropdown-inner {
+    width: 70%;
+    margin: 10px auto;
+  }
   .form-design {
     margin-top: 20px;
   }
@@ -237,39 +245,13 @@ label {
 .footer {
   margin-top: auto;
   color: white;
-  background: -webkit-gradient(linear, left top, right bottom, from(#181818), to(#242323));
-  background: linear-gradient(to bottom right, #181818, #242323);
-}
-
-.footer-title {
-  font-weight: 600;
-  font-size: large;
+  background: #153373;
 }
 
 .footer label {
   display: -ms-grid;
   display: grid;
-  color: white;
-}
-
-.subscribe-input {
-  width: 50%;
-  margin: 10px auto;
-}
-
-.subscribe button {
-  color: white;
-  background-color: black;
-  border: none;
-  padding: 6px 6px 9.6px;
-}
-
-.copyright {
-  padding: 1em;
-  margin-bottom: 0px;
-  color: white;
-  background-color: black;
-  text-align: center;
+  color: #f7f7f7;
 }
 
 .grid-footer {
@@ -287,7 +269,7 @@ label {
 
 .some:hover {
   cursor: pointer;
-  color: #031CA6;
+  color: #2d68cc;
   margin: 10px;
   font-size: 30px;
 }
@@ -297,12 +279,6 @@ label {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  .footer h3 {
-    font-size: 15px;
-  }
-  .footer p {
-    font-size: 10px;
-  }
   .footer input {
     display: none;
   }
@@ -310,7 +286,7 @@ label {
     display: none;
   }
   .some {
-    font-size: 15px;
+    font-size: 20px;
   }
 }
 
@@ -642,10 +618,13 @@ nav a:hover {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .details-sendenquiry {
+    margin: 10px auto;
+  }
 }
 
 @media (max-width: 500px) {
-  .hotel {
+  .hotel-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
