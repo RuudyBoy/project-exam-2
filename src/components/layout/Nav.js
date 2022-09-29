@@ -32,14 +32,20 @@ function Nav() {
             <Link to="/hotels">  Hotels</Link>
             <Link to="/contact"> Contact</Link>
             <Link to="/about">  About </Link>
+			
 			{auth ? (
 				<>
 					|  <Link to="/dashboard">Dashboard</Link>  <button className="cta-login" onClick={logout}>LOGOUT</button>
 				</>
 			) : (
 				<Link className="cta-nav"  to="/login"> SIGN IN</Link>
+				
 			)}
-		</nav>
+		
+		</nav> 
+		<form className="form-inline">
+			<SearchHotel/>
+		</form>
 		</Navbar.Collapse>
 		</Navbar>
 	);

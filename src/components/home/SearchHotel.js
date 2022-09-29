@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from "react";
+import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { BASE_URL } from '../../constants/api';
 
@@ -43,18 +44,21 @@ function SearchHotel() {
     return (
      <>
      <div>
-        <input className="searchbar" placeholder="Enter hotel here..." type={"search"} onChange={event => setFilter(event.target.value)} />
+        <input className="searchbar" placeholder="Search for hotel here..." type={"search"} onChange={event => setFilter(event.target.value)} />
     </div>
      {hotels.filter(hotel => {
         if (filter === "") {
             return null;
-        } else if (hotel.attributes.hotel.toLowerCase().startsWith(filter.toLowerCase())) {
+        } else if (hotel.attributes.hotel.toLowerCase().includes(filter.toLowerCase())) {
             return hotel;
         }
     }).map((hotel) => (
     <div className="dropdown" key={hotel.id}>
         <Link to={`detail/${hotel.id}`}>
+            <div className="dropdown-design"> 
+            <img className="dropdown-img" src={hotel.attributes.image.data.attributes.url} alt="Logo" />
             <p>{hotel.attributes.hotel}</p>
+            </div>
         </Link>
     </div>
   ))}

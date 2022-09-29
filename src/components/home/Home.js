@@ -16,7 +16,7 @@ export default function Home() {
       <h2>Find a hotel in the beatiful city of Bergen.</h2>
       <Link className="home-cta" to="/hotels"><FaHotel /> BOOK HOTEL</Link>
     </div> 
-    <div>
+    <div className="dropdown-inner">
       <SearchHotel/>
     </div>
     </div>

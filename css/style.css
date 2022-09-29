@@ -54,8 +54,51 @@ body {
   margin-bottom: 10px;
 }
 
+.dropdown-inner {
+  width: 40%;
+  margin: auto;
+}
+
 .searchbar {
-  width: auto;
+  border-radius: 0px;
+  width: 100%;
+  margin: auto;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 2px solid #153373;
+}
+
+.dropdown {
+  background: white;
+}
+
+.dropdown-design {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  margin: 0px;
+  border-bottom: 1px solid #2d68cc;
+}
+
+.dropdown-design:hover {
+  width: 100%;
+  margin: 0px;
+  color: white !important;
+  background-color: #153373;
+  border-bottom: 2px solid #2d68cc;
+}
+
+.dropdown p:hover {
+  color: #f7f7f7 !important;
+}
+
+.dropdown p {
+  color: #2d68cc !important;
+}
+
+.dropdown-img {
+  width: 20%;
 }
 
 .input-design {
@@ -426,6 +469,10 @@ nav a:hover {
   margin: 10px auto;
   border: none;
   border-radius: 5px;
+}
+
+.hotel-title {
+  margin: 10px auto;
 }
 
 .hotel-card {

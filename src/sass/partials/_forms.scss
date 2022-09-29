@@ -9,10 +9,49 @@
 
 //Searchbar
 
+
+.dropdown-inner {
+    width: 40%;
+    margin: auto;
+}
 .searchbar {
-    width: auto;
+    border-radius: 0px;
+    width: 100%;
+    margin: auto;
+    box-shadow: none;
+    border: 2px solid $colour-background;
 }
 
+.dropdown {
+    background: $colour-card-background ;
+}
+
+.dropdown-design {
+    display: inline-flex;
+    width: 100%;
+    margin: 0px;
+    border-bottom: 1px solid $colour-secondary;
+}
+
+.dropdown-design:hover {
+    width: 100%;
+    margin: 0px;
+    color: white !important;
+    background-color: $colour-background;
+    border-bottom: 2px solid $colour-secondary;
+}
+
+.dropdown p:hover {
+    color: $colour-text !important;
+}
+
+.dropdown p {
+    color: $colour-secondary !important;
+}
+
+.dropdown-img {
+    width: 20%;
+}
 
 
 //Contact form 
@@ -99,6 +138,7 @@ label {
     form {
         margin-bottom: 20px;
     }
+
 
     //ctaHome
 
