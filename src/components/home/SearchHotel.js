@@ -67,18 +67,3 @@ function SearchHotel() {
    }
    
    export default SearchHotel; 
-   
-   /*{books.map(function (book) {
-       return <div key={book.id}> <h2>{book.attributes.hotel}</h2></div>;
-      })}
-
-  <div>
-      <input placeholder="Enter hotel Title" onChange={event => setQuery(event.target.value)} />
-    {
-      books.map((hotel, index) => {
-        <div key={index}>
-          <p>{hotel.attributes.hotel}</p>
-        </div>
-      })
-    }
-    </div>*/

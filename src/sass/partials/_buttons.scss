@@ -12,8 +12,7 @@
 .cta-button:hover {
     padding: 5px 1em;
     background: linear-gradient($colour-primary, $colour-background);
-    transition: 0.5s;
-    box-shadow: 5px 5px 5px 5px $colour-box-shadow;
+    box-shadow: 2px 2px 2px 2px $colour-box-shadow;
 }
 
 //Homepagebutton
@@ -28,8 +27,8 @@
 .home-cta:hover {
     color: $colour-text;
     background: linear-gradient($colour-primary, $colour-background);
-    transition: 1s;
-    box-shadow: 5px 5px 5px 5px $colour-box-shadow;
+    transition: 0.5s;
+    box-shadow: 2px 2px 2px 2px $colour-box-shadow;
 }
 
 
@@ -46,80 +45,17 @@
 
 .cta-nav:hover { 
     background: $colour-background;
-    box-shadow: 5px 5px 5px 5px $colour-box-shadow;
-    padding: 5px 1em;
-    transition: 1s;
-    border-radius: 5px;
-    margin: 10px;
-    margin-bottom: 10px;
-}
-
-//formbuttons
-/*
-.cta-form {
-    border-radius: 5px;
-    background-color: #2f74e9;
-    border: none;
-    color: #f7f7f7;
-    padding: 5px 1em;
-}
-
-.cta-form:hover {
-    background: linear-gradient(#2d68cc, #031CA6);
-    transition: 0.5s;
-}*/
-
-/*
-.cta-login {
-    border: none;
-    background-color:#2f74e9 ;
-    color: white;
+    box-shadow: 2px 2px 2px 2px $colour-box-shadow;
     padding: 5px 1em;
     border-radius: 5px;
     margin: 10px;
     margin-bottom: 10px;
 }
 
-.cta-login:hover {
-    text-decoration: none;
-    background: linear-gradient(#2d68cc, #031CA6);
-    color: white;
-    transition: 0.5s;
-}*/
+@media (max-width: 986px) {
 
-
-
-//hotelbuttons
-/*
-.cta-send {
-    display: inline;
-    background-color: #2d68cc;
-    color: #f7f7f7;
-    border: 2px solid #2f74e9;
-    padding: 5px 1em;
-    margin-bottom: 0px;
-    margin: 5px;
+    .home-cta {
+        font-size: unset;
+    }
 }
-
-.cta-send:hover {
-    padding: 5px 1em;
-    background: linear-gradient(#2d68cc, #031CA6);
-    color: #f7f7f7;
-    transition: 0.5s;
-}
-
-.cta-hotel {
-    color: white !important;
-    border-radius: 5px;
-    background-color: $colour-primary;
-    padding: 5px 1em;
-    margin: 5px;
-}
-
-.cta-hotel:hover {
-    padding: 5px 1em;
-    background: linear-gradient(#2d68cc, #031CA6);
-    color: #f7f7f7;
-    transition: 0.5s;
-}*/
 

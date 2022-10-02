@@ -11,7 +11,7 @@
     
     .standard-background {
          background:$colour-background;
-         height:100vh;
+         height:max-content;
          background-position: center;
          background-size: cover;
          background-repeat: no-repeat;
@@ -42,6 +42,16 @@
         .standard-background {
             height: max-content;
         }
+
+        .hotel-background {
+            background:none
+        }
+
+        .hotel-title h1 {
+            color: $colour-text;
+        }
+
     }
+
            
     
