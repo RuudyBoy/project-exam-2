@@ -39,17 +39,8 @@ export default function AddHotels() {
                 rating: data.rating,
 				text: data.text,
                 image: data.image
-			}
-			}
-               
-            );
-			console.log("response", response.data);
-			console.log(url);
-			console.log(data);
-			
+			}});
 		} catch (error) {
-			console.log("error", error);
-			console.log( error.response)
             setLoginError(error.toString());
 		} finally {
 			setSubmitting(false);

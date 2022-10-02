@@ -40,7 +40,7 @@
     color: $colour-text;
     padding: 5px 1em;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .cta-nav:hover { 
@@ -48,8 +48,6 @@
     box-shadow: 2px 2px 2px 2px $colour-box-shadow;
     padding: 5px 1em;
     border-radius: 5px;
-    margin: 10px;
-    margin-bottom: 10px;
 }
 
 @media (max-width: 986px) {

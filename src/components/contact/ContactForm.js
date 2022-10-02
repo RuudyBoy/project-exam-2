@@ -38,24 +38,13 @@ export default function ContactForm() {
 				 message: data.message
 			}});
 			
-			console.log("response", response.data);
-			console.log(url);
-			console.log(data);
-
-
-
-			
 		} catch (error) {
-			console.log("error", error);
-			console.log( error.response)
             setLoginError(error.toString());
 		} 
 	}
 
-	
 	return (
 		<>
-	
 			<form className="form-design"onSubmit={handleSubmit(onSubmit)}>
 			{submitted && <Alert variant="success"><p className="form-success"><FaCheckCircle/></p>Message sent!</Alert>}
 			{loginError && <FormError>{loginError}</FormError>}

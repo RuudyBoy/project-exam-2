@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { BASE_URL } from "../../constants/api";
 import HotelItem from "./HotelItem";
+import logo from "../../images/holidazeform128.png"
+
 
 const url = BASE_URL + "hotels?populate=*";
 
@@ -16,7 +18,6 @@ function GetHotel() {
 
     if (response.ok) {
      const json = await response.json();
-     console.log(json);
      setHotels(json.data);
     } else {
      setError("An error occured");
@@ -31,11 +32,14 @@ function GetHotel() {
  }, []);
 
  if (loading) {
-  return <div>Loading...</div>;
+  return <div className="loading-text">
+   <img className="logo" src={logo} alt="Logo" />
+   <h2>Finding Hotels...</h2>
+   </div>;
  }
 
  if (error) {
-  return setError("An error occured");
+  return setError("We have problems finding hotels, try to refresh the site:)");
  }
 
  return ( 

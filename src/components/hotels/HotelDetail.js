@@ -24,12 +24,11 @@ function HotelDetail() {
    async function fetchDetails() {
     try {
      const response = await fetch(url);
-
      if (response.ok) {
       const json = await response.json();
       setHotel(json); 
      } else {
-      setError("An error occured");
+      setError("We have problems getting the hotel details.");
      }
     } catch (error) {
      setError(error.toString());
@@ -43,7 +42,7 @@ function HotelDetail() {
  );
 
  if (loading) {
-  return <div>Loading...</div>;
+  return <div>Fetching hoteldetails...</div>;
  }
 
  if (error) {

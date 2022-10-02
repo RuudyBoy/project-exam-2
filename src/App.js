@@ -6,7 +6,6 @@ import Nav from './components/layout/Nav';
 import DashboardPage from './components/dashboard/DashboardPage';
 import "./sass/style.scss"
 import { AuthProvider } from './context/AuthContext';
-import LoginPage from "./components/login/LoginPage";
 import Contact from "./components/contact/Contact";
 import About from "./components/about/About";
 import Footer from "./components/layout/footer";
@@ -16,6 +15,7 @@ import Enquiry from "./components/enquiry/enquiry";
 import Hotels from "./components/hotels/Hotels";
 import HotelDetail from './components/hotels/HotelDetail';
 import AddHotel from './components/add-hotel/AddHotel';
+import SigninPage from './components/signin/SigninPage';
 
 
 
@@ -42,8 +42,8 @@ function App() {
             <Route path="/about">
 							<About />
 						</Route>
-          <Route path="/login">
-							<LoginPage />
+          <Route path="/signin">
+							<SigninPage />
 						</Route>
             <Route path="/add-hotel">
 						< AddHotel/>

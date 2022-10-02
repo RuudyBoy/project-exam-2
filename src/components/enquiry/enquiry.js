@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import SendEnquiry from './EnquiryPost';
+import SendEnquiry from './EnquiryForm';
 
 export default function Enquiry() {
   return (

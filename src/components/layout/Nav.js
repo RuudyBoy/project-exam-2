@@ -5,12 +5,6 @@ import { Link } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
 import logo from "../../images/holidazehvittekst64.png"
 
-
-
-
-
-
-
 function Nav() {
 	const [auth, setAuth] = useContext(AuthContext);
 
@@ -34,10 +28,10 @@ function Nav() {
 			
 			{auth ? (
 				<>
-					|  <Link to="/dashboard">Dashboard</Link>  <button className="cta-nav" onClick={logout}>LOGOUT</button>
+					|  <Link to="/dashboard">Dashboard</Link>  <button className="cta-nav" onClick={logout}>SIGN OUT</button>
 				</>
 			) : (
-				<Link className="cta-nav"  to="/login"> SIGN IN</Link>
+				<Link className="cta-nav"  to="/signin"> SIGN IN</Link>
 				
 			)}
 		

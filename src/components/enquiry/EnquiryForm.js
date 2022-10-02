@@ -53,7 +53,6 @@ export default function SendEnquiry() {
             setLoginError(error.toString());
 		} 
 	}
-
 	return (
 		<>
             <Heading classname="enquiry-title" title="Send enquiry" />

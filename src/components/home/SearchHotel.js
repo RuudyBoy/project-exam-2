@@ -19,7 +19,6 @@ function SearchHotel() {
    
        if (response.ok) {
         const json = await response.json();
-        console.log(json);
         setHotels(json.data);
        } else {
         setError("An error occured");

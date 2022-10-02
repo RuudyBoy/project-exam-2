@@ -22,6 +22,7 @@ export default function useLocalStorage(key, initialValue) {
 
 			window.localStorage.setItem(key, JSON.stringify(valueToStore));
 		} catch (error) {
+			<p>An error has occured</p>
 		}
 	};
 

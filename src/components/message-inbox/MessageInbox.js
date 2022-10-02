@@ -7,6 +7,7 @@ import MessageList from "./MessageList";
 export default function MessageInbox() {
 	return (
 		<>
+		<div className="standard-background">
         <div className="inbox-container"> 
         <p className="inbox-icon">< FaInbox /></p>
         <h1>Message inbox</h1>
@@ -15,6 +16,7 @@ export default function MessageInbox() {
 		</div>
 		<Link to="/dashboard" className="back-link"> Back to dashboard page </Link>
         </div>
+		</div>
 		</>
 	);
 }

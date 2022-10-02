@@ -18,9 +18,9 @@ const schema =yup.object({
     password: yup.string().required("Please enter your password").min(4, "password must contain at least 4 characters").matches("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})", "Please enter a valid password"),
   }).required();
 
-export default function LoginForm() {
+export default function SigninForm() {
     const [submitting, setSubmitting] = useState(false);
-	const [loginError, setLoginError] = useState(null);
+	const [signinError, setSigninError] = useState(null);
 
 	const history = useHistory();
 
@@ -34,9 +34,7 @@ export default function LoginForm() {
       async function onSubmit(data) {
 		
 		setSubmitting(true);
-        setLoginError(null);
-
-		console.log(data);
+        setSigninError(null);
 
 		try {
 			const response = await axios.post(url,  {
@@ -48,7 +46,7 @@ export default function LoginForm() {
 			history.push("/dashboard");
 			
 		} catch (error) {
-            setLoginError(error.toString());
+            setSigninError(error.toString());
 		} finally {
 			setSubmitting(false);
 		}
@@ -59,7 +57,7 @@ export default function LoginForm() {
 		
 			<form className="form-design"onSubmit={handleSubmit(onSubmit)}>
 			{submitting && <Alert variant="success"><p className="form-success"><FaCheckCircle/></p>You successfully signed in!</Alert>}
-            {loginError && <FormError>{loginError}</FormError>}
+            {signinError && <FormError>{signinError}</FormError>}
             <fieldset disabled={submitting}>
 				<h1 className="form-title">Sign in</h1>
                 <div>
@@ -69,7 +67,7 @@ export default function LoginForm() {
                 </div>
 				<div>
 					<label>Password</label>
-                    <input name="password"  type={"password"} {...register("password", { required: true })} />
+                    <input name={"password"}  type={"password"} {...register("password", { required: true })} />
 					{errors.password && <FormError>{errors.password.message}</FormError>}
                 </div>
             <button className="cta-button">{submitting ? "Signing in..." : "SIGN IN"}</button>

@@ -1,16 +1,16 @@
 
-import LoginForm from "./LoginForm";
+import SigninForm from "./SigninForm";
 import logo from "../../images/holidazeform128.png"
 
-export default function LoginPage() {
+export default function SigninPage() {
 	return (
 		<>
 		<div className="standard-background">
 		<img className="form-logo" src={logo} alt="Logo" />
 		<div>
-			<LoginForm />
+			<SigninForm />
 		</div>
-			</div>
+		</div>
 		</>
 	);
 }

@@ -16,7 +16,6 @@ function MessageList() {
 
     if (response.ok) {
      const json = await response.json();
-     console.log(json);
      setMessages(json.data);
     } else {
      setError("An error occured");

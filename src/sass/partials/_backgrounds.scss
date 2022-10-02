@@ -11,7 +11,7 @@
     
     .standard-background {
          background:$colour-background;
-         height:max-content;
+         height:100vh;
          background-position: center;
          background-size: cover;
          background-repeat: no-repeat;
@@ -19,8 +19,9 @@
 
 
     .hotel-background {
-         background: url(../../images/pexels-nextvoyage-3580098.jpg);
+          background: url(../../images/pexels-nextvoyage-3580098.jpg);
           height:max-content;
+          background: (.5);
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;

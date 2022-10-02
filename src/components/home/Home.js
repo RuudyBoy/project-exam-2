@@ -9,7 +9,6 @@ import SearchHotel from './SearchHotel';
 export default function Home() {
   return (
     <>
-   
     <div className="home-background"> 
     <div className="dropdown-inner">
       <SearchHotel/>
