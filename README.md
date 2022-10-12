@@ -9,8 +9,6 @@ image.png
 
 Description
 Holidaze is a website for booking hotels in Bergen. Holidaze offers reasonable prices for the best hotels in the city and outside the city. If you have questions to us in Holidaze you can always sedn us a message via the contact from. We will answer and help you as soon as possible. Our support team is available from kl09:00-kl16:00.
-
-You can add some bullet points if you'd like to:
 - Hotels
 - Bergen
 - Easy booking
