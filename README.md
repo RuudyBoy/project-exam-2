@@ -1,10 +1,12 @@
 Login information:
+
 Email/Username : Project@exam.com
+
 Password : Exam2022
 
 
 Holidaze. Project exam 2
-image.png
+![holidaze](https://user-images.githubusercontent.com/73653923/196039600-fde16df4-5517-4e18-924d-00dc5ba3e8d2.png)
 
 
 Description
@@ -14,18 +16,21 @@ Holidaze is a website for booking hotels in Bergen. Holidaze offers reasonable p
 - Easy booking
 
 Built With
-You can list a the tech stack that you've used over here
-React.js
-Bootstrap
-sass
+
+- React.js
+- Bootstrap
+- sass
 
 Getting Started
 
 Installing
 
 Clone the repo:
+
 git clone git@github.com:RuudyBoy/project-exam-2.git
+
 Install the dependencies:
+
 npm install
 
 Running
@@ -35,9 +40,11 @@ To run the app, run the following commands:
 npm run start or npm start
 
 Contributing
+
 If changing some code please write in detail what you have changed so i can review the code.
 
 Contact
+
 Instagram: ruuden98
 Facebook: Christian Jørgensen Ruud
 
