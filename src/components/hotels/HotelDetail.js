@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams, useHistory } from "react-router-dom";
-import bilde from "../../images/detail.jpg";
+
 import { mockHotels } from "../../constants/mockHotels";
 
 function HotelDetail() {

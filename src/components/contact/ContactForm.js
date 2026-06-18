@@ -6,9 +6,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import FormError from "../common/FormError";
-import Heading from "../layout/Heading";
 import { FaCheckCircle, FaPaperPlane, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaExclamationCircle } from "react-icons/fa";
-import { Alert } from "react-bootstrap";
 
 const url =  BASE_URL + "messages";
 
@@ -32,7 +30,7 @@ export default function ContactForm() {
         setLoginError(null);
 	
 		try {
-			const response = await axios.post(url, { "data": {
+			await axios.post(url, { "data": {
 				 name: data.name,
                  email: data.email,
 				 message: data.message

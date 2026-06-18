@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from "react";
-import { FaSearch } from 'react-icons/fa';
+
 import { Link } from 'react-router-dom';
 import { mockHotels } from '../../constants/mockHotels';
 

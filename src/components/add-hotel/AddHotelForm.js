@@ -34,7 +34,7 @@ export default function AddHotels() {
 		console.log(data);
 
 		try {
-			const response = await axios.post(url, { "data": {
+			await axios.post(url, { "data": {
 				hotel: data.hotel,
                 rating: data.rating,
 				text: data.text,
