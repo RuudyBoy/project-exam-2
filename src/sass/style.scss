@@ -13,3 +13,25 @@
 @import "partials/loginpage";
 @import "partials/buttons";
 
+// Utilities
+.glass-panel {
+    background: rgba(10, 25, 47, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.modern-card {
+    background: $colour-card-background;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
+    }
+}

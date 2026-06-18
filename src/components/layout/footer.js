@@ -1,4 +1,5 @@
-import { FaFacebook, FaHandPointDown, FaInstagram, FaPhone, FaRegCopyright, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaPhone, FaRegCopyright, FaTwitter } from 'react-icons/fa';
+import logo from "../../images/holidazeform128.png";
 
 export default function Footer() {
   return (
@@ -6,7 +7,7 @@ export default function Footer() {
     <div className='footer'>
     <div className='grid-footer'>
         <div>
-            <h3 >Phone support</h3>
+            <img src={logo} alt="Holidaze Logo" style={{ maxWidth: '150px', marginBottom: '15px' }} />
             <p>< FaPhone/> +98746342514</p>
             <p>Copyright <FaRegCopyright/> 2022</p>
         </div>
@@ -23,6 +24,9 @@ export default function Footer() {
             <p>Privacy Policy</p>
             <p>Terms of use</p>
         </div>  
+    </div>
+    <div style={{ textAlign: 'center', marginTop: '20px', paddingTop: '20px', borderTop: '1px solid #333', fontSize: '0.9rem', color: '#999' }}>
+        <p><em>Disclaimer: This site is for design and code purposes only for a project exam. It is not an actual hotel website and no real bookings can be made.</em></p>
     </div>
     </div>
     </>

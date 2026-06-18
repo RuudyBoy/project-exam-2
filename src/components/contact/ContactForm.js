@@ -7,7 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import FormError from "../common/FormError";
 import Heading from "../layout/Heading";
-import { FaCheckCircle, FaSignInAlt } from "react-icons/fa";
+import { FaCheckCircle, FaPaperPlane, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaExclamationCircle } from "react-icons/fa";
 import { Alert } from "react-bootstrap";
 
 const url =  BASE_URL + "messages";
@@ -44,41 +44,66 @@ export default function ContactForm() {
 	}
 
 	return (
-		<>
-			<form className="form-design"onSubmit={handleSubmit(onSubmit)}>
-			{submitted && <Alert variant="success"><p className="form-success"><FaCheckCircle/></p>Message sent!</Alert>}
-			{loginError && <FormError>{loginError}</FormError>}
-            <fieldset disabled={submitted}>
-			<Heading className="form-title" title="Contact" />
-                <div>
-					<label>Full name</label>
-                    <input name="name" {...register("name")} />
-					{errors.name && <FormError>{errors.name.message}</FormError>}
-                </div>
-				<div>
-				<label>Email</label>
-                    <input name="email"  {...register("email")} />
-					{errors.email && <FormError>{errors.email.message}</FormError>}
-                </div>
-				<div>
-					<label>Message</label>
-                    <textarea name="message"  {...register("message")} />
-					{errors.message && <FormError>{errors.message.message}</FormError>}
-                </div>	
-				<div>
-					
+		<div className="form-page-container">
+			<form className="split-form" onSubmit={handleSubmit(onSubmit)}>
+				<div className="form-left">
+					<h2>Send us a message</h2>
+					{submitted && (
+                        <div className="alert-success">
+                            <p className="form-success"><FaCheckCircle/></p>
+                            <div>
+                                <strong style={{color: '#64FFDA', fontSize: '1.1rem'}}>Message sent successfully!</strong>
+                                <p style={{margin: 0, fontSize: '0.9rem', color: '#8892B0'}}>We will get back to you shortly.</p>
+                            </div>
+                        </div>
+                    )}
+					{loginError && <FormError><FaExclamationCircle/> {loginError}</FormError>}
+					<fieldset disabled={submitted}>
+						<div>
+							<label>Full name</label>
+							<input name="name" {...register("name")} placeholder="John Doe" />
+							{errors.name && <span><FaExclamationCircle style={{marginRight: '5px', marginTop: '-2px'}}/> {errors.name.message}</span>}
+						</div>
+						<div>
+							<label>Email</label>
+							<input name="email" {...register("email")} placeholder="john@example.com" />
+							{errors.email && <span><FaExclamationCircle style={{marginRight: '5px', marginTop: '-2px'}}/> {errors.email.message}</span>}
+						</div>
+						<div>
+							<label>Message</label>
+							<textarea name="message" {...register("message")} placeholder="Write your message here..." rows="4" />
+							{errors.message && <span><FaExclamationCircle style={{marginRight: '5px', marginTop: '-2px'}}/> {errors.message.message}</span>}
+						</div>	
+					</fieldset>
 				</div>
-            <button className="cta-button" type="submit"> Send message <FaSignInAlt/></button>
-            </fieldset>
+				<div className="form-right">
+					<h2>Contact Details</h2>
+					<div className="contact-info-block">
+                        <FaMapMarkerAlt className="info-icon" />
+                        <div className="info-content">
+                            <p className="info-label">Address</p>
+                            <p className="info-value">Bryggen 1<br/>5003 Bergen, Norway</p>
+                        </div>
+					</div>
+					<div className="contact-info-block">
+                        <FaPhoneAlt className="info-icon" />
+                        <div className="info-content">
+                            <p className="info-label">Phone Number</p>
+                            <p className="info-value">+47 55 55 55 55</p>
+                        </div>
+					</div>
+					<div className="contact-info-block">
+                        <FaEnvelope className="info-icon" />
+                        <div className="info-content">
+                            <p className="info-label">Email Address</p>
+                            <p className="info-value">post@holidaze.no</p>
+                        </div>
+					</div>
+					<button className="cta-button" type="submit" disabled={submitted}>
+						Send Message <FaPaperPlane />
+					</button>
+				</div>
 			</form>
-		</>
+		</div>
 	);
 }
-
-
-
-
-
-
-
-

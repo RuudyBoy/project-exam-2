@@ -1,58 +1,49 @@
-//Footer 
+// Footer 
 .footer {
-    margin-top:auto;
-    color: white;
-    background: $colour-background;
+    margin-top: auto;
+    color: $colour-text;
+    background: rgba(10, 25, 47, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem 0;
 }
-
 
 .footer label {
     display: grid;
     color: $colour-text;
 }
 
-
 .grid-footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .some {
     margin: 10px;
-    font-size: 30px;
-}
-.some:hover {
-    cursor: pointer;
-    color: $colour-secondary;
-    margin: 10px;
-    font-size: 30px;
+    font-size: 24px;
+    color: $colour-text;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        cursor: pointer;
+        color: $colour-accent;
+        transform: translateY(-3px);
+    }
 }
 
-//Responsive footer
-
+// Responsive footer
 @media (max-width: 986px) {
-
     .grid-footer {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-
-    .footer input {
-        display: none;
-    }
-
+    .footer input,
     .footer button {
         display: none;
     }
-
-    .some {
-        font-size: 20px;
-    }
-
-    .some:hover {
-        font-size: 20px;
-    }
-    
-
 }

@@ -1,133 +1,206 @@
-//Links
-
+// Links
 .back-link {
     text-decoration: underline;
-    color: $colour-text;
+    color: $colour-accent;
     margin-bottom: 10px;
-}
-
-//Searchbar
-
-.dropdown-inner {
-    width: 40%;
-    margin: 10px auto;
-}
-.searchbar {
-    outline: none;
-    border-radius: 5px 5px 0px 0px;
-    width: 100%;
-    margin: auto;
-    margin-top: 10px;
-    box-shadow: none;
-    border-bottom: 1px solid  $colour-background;
-}
-
-.dropdown {
-    background: $colour-card-background;
-}
-
-.dropdown-design {
-    border-bottom: 1px solid $colour-background;
-    display: inline-flex;
-    width: 100%;
-    margin: 0px;
-    //border-bottom: 1px solid $colour-secondary;
-}
-
-.dropdown-design:hover {
-    width: 100%;
-    margin: 0px;
-    color: white !important;
-    background-color: $colour-background;
-    border-bottom: 2px solid $colour-secondary;
-}
-
-.dropdown p:hover {
-    color: $colour-text !important;
-}
-
-.dropdown p {
-    color: $colour-secondary !important;
-}
-
-.dropdown-img {
-    width: 20%;
-}
-
-
-//Contact form 
-.input-design {
-    display: table;
-}
-
-//Form
-
-.form-design {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    width: 300px;
     display: inline-block;
-    place-items: center;
-    background-color: $colour-form-background;
-    padding: 20px;
-    border: none;
-    border-radius: 5px;
+    transition: color 0.3s ease;
+    
+    &:hover {
+        color: lighten($colour-accent, 15%);
+    }
 }
 
+// Form general
+.form-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 3rem 2rem;
+}
+
+.split-form {
+    display: flex;
+    flex-direction: row;
+    background: $colour-card-background;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .form-left {
+        flex: 1.2;
+        padding: 50px;
+        background-color: $colour-card-background;
+        
+        h2 {
+            color: $colour-alternative-text;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            font-family: $font-primary;
+            font-weight: 600;
+        }
+
+        fieldset { border: none; padding: 0; margin: 0; }
+
+        label {
+            display: block;
+            color: $colour-text;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-family: $font-secondary;
+            transition: color 0.3s ease;
+        }
+
+        input, textarea {
+            width: 100%;
+            background-color: rgba(2, 12, 27, 0.5);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            color: $colour-alternative-text;
+            font-family: $font-secondary;
+            font-size: 1rem;
+            margin-bottom: 25px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+
+            &::placeholder {
+                color: rgba(136, 146, 176, 0.5);
+            }
+
+            &:focus {
+                outline: none;
+                border-color: $colour-accent;
+                background-color: rgba(2, 12, 27, 0.8);
+                box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.1);
+            }
+        }
+    }
+
+    .form-right {
+        flex: 1;
+        padding: 50px;
+        background: linear-gradient(135deg, $colour-primary 0%, darken($colour-primary, 5%) 100%);
+        color: $colour-alternative-text;
+        display: flex;
+        flex-direction: column;
+        border-left: 1px solid rgba(255, 255, 255, 0.05);
+
+        h2 {
+            color: $colour-white;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            font-family: $font-primary;
+        }
+
+        .contact-info-block {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            
+            .info-icon {
+                color: $colour-accent;
+                font-size: 1.5rem;
+                margin-top: 2px;
+            }
+
+            p.info-label {
+                font-size: 0.85rem;
+                color: $colour-text;
+                margin-bottom: 5px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: 600;
+            }
+            p.info-value {
+                font-size: 1.1rem;
+                color: $colour-alternative-text;
+                line-height: 1.5;
+                margin: 0;
+            }
+        }
+
+        .cta-button {
+            margin-top: auto;
+            background-color: transparent;
+            color: $colour-accent !important;
+            border: 2px solid $colour-accent;
+            border-radius: 8px;
+            padding: 15px 30px;
+            align-self: flex-start;
+            font-weight: 600;
+            font-family: $font-secondary;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: rgba(100, 255, 218, 0.1);
+                transform: translateY(-2px);
+            }
+            
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+                transform: none;
+            }
+        }
+    }
+}
 
 .form-error {
-    background-color: orange;
-    padding: 1em;
-    border: none;
-    border-radius: 5px;
-    color: $colour-text;
-    margin-bottom: 5px;
-
+    background-color: rgba(255, 82, 82, 0.1);
+    border-left: 4px solid #FF5252;
+    padding: 1rem;
+    border-radius: 4px;
+    color: #FF5252;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
 }
 
-.form-design span {
-    font-family: 'Open Sans', sans-serif;
-    display: grid;
-    color: $colour-card-background;
-    background-color: orange;
-    padding: 1em;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    
+.form-left span {
+    display: block;
+    color: #FF5252;
+    font-size: 0.85rem;
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
 
 .alert-success {
-   font-family: 'Open Sans', sans-serif;
-   color: $colour-text;
-   padding: 30px 40px;
-   background-color: rgb(13, 163, 13);
-   border: none ;
-
+    color: $colour-accent;
+    padding: 20px;
+    background-color: rgba(100, 255, 218, 0.1);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .form-success {
-    font-size: 40px;
-    color: $colour-text;
+    font-size: 1.5rem;
+    color: $colour-accent;
+    margin: 0;
 }
 
-
-.form-title {
-    margin-bottom: 20px;
-}
-
-input, textarea {
-    width: 100%;
-    border-radius: 5px;
-    padding: 5px;
-    border: none;
-    margin: 10px auto;
-    box-shadow: 5px 5px $colour-inputs-box-shadow;
-}
-
-label {
-    display: flex;
-    color: $colour-secondary;
-    font-weight: 300;
+@media (max-width: 768px) {
+    .split-form {
+        flex-direction: column;
+        
+        .form-left, .form-right {
+            padding: 30px 20px;
+        }
+    }
 }
 
 

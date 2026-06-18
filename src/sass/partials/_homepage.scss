@@ -1,32 +1,144 @@
-//Home page
+// Home page / Hero section
+
+.home-background {
+    min-height: 100vh;
+    background: linear-gradient(rgba(2, 12, 27, 0.6), rgba(2, 12, 27, 0.8)), url('../../images/bakgrunn.jpg') center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 80px;
+}
 
 .home-container {
-    margin-top: 70px;
-    margin-bottom: 20px;
-}
+    text-align: center;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
 
-
-.home-container h1 {
-    font-size: 60px;
-    text-shadow: 2px 1px $colour-box-shadow;
-}
-
-.home-container h2 {
-    color: $colour-alternative-title;
-    margin-bottom: 20px;
-    text-shadow: 2px 1px $colour-box-shadow;
-}
-
-//Smaller screens
-
-@media (max-width: 986px) {
-    
-    .home-container h1 {
-        font-size: 30px;
+    h1 {
+        font-size: 4.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        color: #ffffff !important;
     }
-    
-    .home-container h2 {
-        font-size: 15px;
-        margin: 20px auto;
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $colour-text;
+        margin-bottom: 3rem;
+        font-family: $font-secondary;
+    }
+}
+
+.home-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: $colour-accent;
+    color: $colour-primary;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 25px rgba(100, 255, 218, 0.3);
+        color: $colour-primary;
+        text-decoration: none;
+    }
+}
+
+// Search Dropdown inside Hero
+.dropdown-inner {
+    width: 100%;
+    margin-bottom: 2rem;
+    z-index: 10;
+    position: relative;
+}
+
+.searchbar {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border: none;
+    border-radius: 12px;
+    background: $colour-card-background;
+    color: $colour-alternative-title;
+    font-size: 1.1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    outline: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    &::placeholder {
+        color: $colour-text;
+    }
+
+    &:focus {
+        border-color: $colour-accent;
+        box-shadow: 0 20px 40px rgba(100, 255, 218, 0.1);
+    }
+}
+
+.dropdown {
+    position: absolute;
+    width: 100%;
+    background: $colour-card-background;
+    margin-top: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 100;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.dropdown-design {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 15px;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    p {
+        margin: 0;
+        font-weight: 500;
+        color: $colour-alternative-title;
+    }
+}
+
+.dropdown-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+// Smaller screens
+@media (max-width: 986px) {
+    .home-container {
+        h1 {
+            font-size: 3rem;
+        }
+        h2 {
+            font-size: 1rem;
+        }
     }
 }
